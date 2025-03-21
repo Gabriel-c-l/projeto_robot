@@ -111,3 +111,5 @@ Para dúvidas ou melhorias, entre em contato com o responsável pelo projeto.
 ---
 **Desenvolvido por:** Gabriel
 
+------------------------------------------------------------------------
+robot -d result -t "Criar Usuário e Clicar em Signup" exemplo_teste.robot
