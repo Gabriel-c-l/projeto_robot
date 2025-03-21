@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-21T14:57:57.377419" rpa="false" schemaversion="5">
+<suite id="s1" name="Exemplo Teste" source="C:\Users\ga060224\Desktop\projeto_robot\exemplo_teste.robot">
+<test id="s1-t1" name="Criar Usuário e Clicar em Signup" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:57:58.535593" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-21T14:57:58.535190" elapsed="3.683824"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-21T14:58:02.219822" elapsed="0.068170"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[@href='/password/login']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-21T14:58:02.290389" elapsed="0.060556"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:58:02.352140" level="INFO">Clicking element 'xpath=//a[@href='/password/login']'.</msg>
+<arg>xpath=//a[@href='/password/login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:58:02.351602" elapsed="0.211186"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[@href='/password/signup']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-21T14:58:02.563378" elapsed="0.045864"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:58:02.610233" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
+<arg>xpath=//a[@href='/password/signup']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:58:02.609808" elapsed="0.105718"/>
+</kw>
+<kw name="Email" owner="FakerLibrary">
+<msg time="2025-03-21T14:58:02.717125" level="INFO">${EMAIL} = yhernandez@example.net</msg>
+<var>${EMAIL}</var>
+<status status="PASS" start="2025-03-21T14:58:02.716160" elapsed="0.001068"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@type='email']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-21T14:58:02.717868" elapsed="0.029116"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:58:02.748049" level="INFO">Typing text 'yhernandez@example.net' into text field 'xpath=//input[@type='email']'.</msg>
+<arg>xpath=//input[@type='email']</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:58:02.747548" elapsed="0.188438"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:58:02.937096" level="INFO">Typing text 'Teste@1234' into text field 'xpath=//input[@type='password']'.</msg>
+<arg>xpath=//input[@type='password']</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:58:02.936605" elapsed="0.125424"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(text(), 'Signup')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-21T14:58:03.062867" elapsed="0.030446"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:58:03.094176" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Signup')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:58:03.093808" elapsed="0.113608"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Welcome!</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-21T14:58:03.207921" elapsed="3.177878"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:58:06.401479" level="INFO">Current page contains text 'Signup successful!'.</msg>
+<arg>Signup successful!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-03-21T14:58:06.386154" elapsed="0.015427"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-21T14:58:06.401942" elapsed="3.410526"/>
+</kw>
+<status status="PASS" start="2025-03-21T14:57:58.533401" elapsed="11.279421"/>
+</test>
+<status status="PASS" start="2025-03-21T14:57:57.379830" elapsed="12.434141"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Exemplo Teste" id="s1" pass="1" fail="0" skip="0">Exemplo Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

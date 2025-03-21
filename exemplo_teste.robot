@@ -1,10 +1,10 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    FakerLibrary
 
 *** Variables ***
 ${URL}    https://teste-estagiarios.vercel.app/
 ${BROWSER}    Chrome
-${EMAIL}    usuario@teste.com
 ${SENHA}    Teste@1234
 
 *** Test Cases ***
@@ -21,7 +21,8 @@ Criar Usuário e Clicar em Signup
     Wait Until Element Is Visible    xpath=//a[@href='/password/signup']    10s
     Click Element    xpath=//a[@href='/password/signup']
 
-    # Preenche os campos de cadastro
+    # Gera um e-mail falso e preenche os campos de cadastro
+    ${EMAIL}  FakerLibrary.email
     Wait Until Element Is Visible    xpath=//input[@type='email']    10s
     Input Text    xpath=//input[@type='email']    ${EMAIL}
     Input Text    xpath=//input[@type='password']    ${SENHA}
