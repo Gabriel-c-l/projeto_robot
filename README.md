@@ -1,115 +1,70 @@
-# Guia de Instalação e Execução do Projeto Robot Framework
+# Documentação do Projeto Robot Framework
 
-Este documento descreve os passos necessários para configurar e executar o projeto de testes automatizados utilizando **Robot Framework**.
+## Introdução
+Este projeto utiliza o **Robot Framework** para a execução de testes automatizados. O objetivo é facilitar a verificação da funcionalidade do sistema, garantindo qualidade e eficiência nos testes.
 
----
+## Requisitos
+Antes de iniciar, certifique-se de ter os seguintes itens instalados:
 
-## **Pré-requisitos**
+- **Python** (versão 3.x recomendada)
+- **Robot Framework**
+- **Bibliotecas adicionais:**
+  - robotframework-seleniumlibrary
+  - robotframework-requests
+  - robotframework-jsonlibrary
+  - robotframework-datadriver
+  - robotframework-faker  # Para geração de dados fictícios
 
-Antes de rodar o projeto, certifique-se de ter os seguintes itens instalados:
-
-1. **Python** (versão 3.8 ou superior)
-   - Baixe e instale em: [https://www.python.org/downloads/](https://www.python.org/downloads/)
-   - Certifique-se de que o Python está no PATH do sistema
-
-2. **Gerenciador de pacotes `pip` atualizado**
-   ```sh
-   python -m pip install --upgrade pip setuptools
-   ```
-
-3. **Robot Framework e dependências**
-   ```sh
-   pip install robotframework robotframework-seleniumlibrary robotframework-faker
-   ```
-
-4. **Drivers para testes web (se necessário)**
-   - Se estiver testando aplicações web, instale o **WebDriver** do navegador correspondente.
-   - Para o Chrome, instale o **ChromeDriver**: [https://sites.google.com/chromium.org/driver/](https://sites.google.com/chromium.org/driver/)
-
----
-
-## **Configuração do Ambiente**
-
-### **1. Definir a variável `robot.pythonpath` no VS Code (Opcional)**
-Se estiver utilizando o **VS Code**, é necessário configurar corretamente o **robot.pythonpath**:
-
-1. No VS Code, abra o **Command Palette** (`Ctrl + Shift + P`) e pesquise `Preferences: Open Settings (JSON)`.
-2. Adicione ou edite o seguinte trecho:
-   ```json
-   "robot.pythonpath": [
-       "C:\\Users\\SEU_USUARIO\\AppData\\Local\\Programs\\Python\\PythonXXX\\Lib\\site-packages"
-   ]
-   ```
-3. Depois, limpe o cache do Robot Framework:
-   - Abra o **Command Palette** (`Ctrl + Shift + P`)
-   - Digite **"Robot Framework: Clear caches and restart"** e execute.
-
-### **2. Rodar os testes**
-Dentro do diretório do projeto, utilize o seguinte comando:
+Para instalar todas as bibliotecas necessárias, execute:
 ```sh
-robot exemplo_teste.robot
-```
-Ou, caso o comando `robot` não seja reconhecido:
-```sh
-python -m robot exemplo_teste.robot
+pip install -r requirements.txt
 ```
 
----
-
-## **Possíveis Erros e Soluções**
-
-### **Erro: `robot: comando não encontrado`**
-**Causa:** O Robot Framework pode não estar corretamente instalado ou não está no PATH do sistema.
-
-**Solução:**
-1. Confirme se o Robot Framework está instalado:
+## Instalação
+1. Clone este repositório:
    ```sh
-   pip show robotframework
+   git clone <URL_DO_REPOSITORIO>
    ```
-2. Se não estiver instalado, execute:
+2. Acesse o diretório do projeto:
    ```sh
-   pip install robotframework
+   cd projeto_robot
    ```
-3. Caso o erro persista, tente rodar os testes usando:
+3. (Opcional) Crie um ambiente virtual:
    ```sh
-   python -m robot exemplo_teste.robot
+   python -m venv venv
+   source venv/bin/activate  # Linux/macOS
+   venv\Scripts\activate  # Windows
    ```
-
-### **Erro: `ModuleNotFoundError: No module named 'FakerLibrary'`**
-**Causa:** A biblioteca **FakerLibrary** pode não estar instalada corretamente ou não está sendo reconhecida.
-
-**Solução:**
-1. Instale (ou reinstale) a biblioteca:
+4. Instale as dependências:
    ```sh
-   pip install --upgrade robotframework-faker
+   pip install -r requirements.txt
    ```
-2. Se o erro persistir, adicione o caminho correto ao `robot.pythonpath` no VS Code (veja a seção de configuração acima).
 
-### **Erro: `Importing library 'FakerLibrary' failed: No module named 'pkg_resources'`**
-**Causa:** O pacote **setuptools** pode estar desatualizado ou ausente.
+## Execução dos Testes
+Para rodar os testes, utilize um dos seguintes comandos:
 
-**Solução:**
-```sh
-pip install --upgrade setuptools
+1. Utilizando o comando padrão do Robot Framework:
+   ```sh
+   robot tests/
+   ```
+2. Executando diretamente com Python:
+   ```sh
+   python -m robot.run -d results tests/cadastro.robot
+   ```
+
+Se houver arquivos de configuração específicos, adicionar instruções aqui.
+
+## Estrutura do Projeto
+```
+projeto_robot/
+|-- tests/                # Casos de teste do Robot Framework
+|-- resources/            # Arquivos de suporte (ex: keywords customizadas)
+|-- results/              # Relatórios de execução
+|-- robot_test_runner.py  # Script para facilitar a execução dos testes
+|-- README.md             # Documentação do projeto
 ```
 
-### **Erro: `chromedriver` não encontrado**
-**Causa:** Se os testes utilizam **SeleniumLibrary**, é necessário instalar o **WebDriver** correspondente ao navegador em uso.
-
-**Solução:**
-1. Baixe o ChromeDriver: [https://sites.google.com/chromium.org/driver/](https://sites.google.com/chromium.org/driver/)
-2. Adicione o diretório do **ChromeDriver** ao PATH do sistema.
-
 ---
 
-## **Conclusão**
+Esse é um rascunho inicial. Me avise se precisar de ajustes ou mais detalhes!
 
-Agora o ambiente está pronto para rodar os testes automatizados com **Robot Framework**. Caso encontre novos erros, verifique as mensagens de erro e tente reinstalar as dependências necessárias.
-
-Para dúvidas ou melhorias, entre em contato com o responsável pelo projeto.
-
----
-**Desenvolvido por:** Gabriel
-
-------------------------------------------------------------------------
-robot -d result -t "Criar Usuário e Clicar em Signup" exemplo_teste.robot

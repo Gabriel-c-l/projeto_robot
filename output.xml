@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.2 on win32)" generated="2025-03-23T23:06:46.200060" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="c:\Users\Gabriel\Desktop\Coisas de programaçao\projeto_robot\projeto_robot\tests\login\login.robot">
+<test id="s1-t1" name="Login - Credenciais Incorretas" line="11">
+<kw name="Acessar Tela Inicial" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-23T23:06:46.467593" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-23T23:06:46.466568" elapsed="1.541073"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-23T23:06:48.008638" elapsed="0.020945"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//p[contains(text(), 'Password-based Authentication.')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-23T23:06:48.029583" elapsed="0.019947"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-23T23:06:48.050527" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
+<arg>xpath=//p[contains(text(), 'Password-based Authentication.')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-23T23:06:48.050527" elapsed="0.044879"/>
+</kw>
+<doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
+<status status="PASS" start="2025-03-23T23:06:46.465568" elapsed="1.629838"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@type='email']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-23T23:06:48.096404" elapsed="0.024933"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-23T23:06:48.122334" level="INFO">Typing text 'usuario@exemplo.com' into text field 'xpath=//input[@type='email']'.</msg>
+<arg>xpath=//input[@type='email']</arg>
+<arg>usuario@exemplo.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-23T23:06:48.121337" elapsed="0.074069"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@type='password']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-23T23:06:48.195406" elapsed="0.012965"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-23T23:06:48.209371" level="INFO">Typing text 'senhaerrada123' into text field 'xpath=//input[@type='password']'.</msg>
+<arg>xpath=//input[@type='password']</arg>
+<arg>senhaerrada123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-23T23:06:48.208371" elapsed="0.046875"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-23T23:06:48.256243" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Login')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Login')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-23T23:06:48.256243" elapsed="0.048869"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//p[contains(text(), 'Invalid credentials')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-23T23:06:48.305112" elapsed="3.560484"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-23T23:06:51.874571" level="INFO">Current page contains text 'Invalid credentials'.</msg>
+<arg>Invalid credentials</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-03-23T23:06:51.865596" elapsed="0.008975"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-23T23:06:51.874571" elapsed="2.105024"/>
+</kw>
+<status status="PASS" start="2025-03-23T23:06:46.465568" elapsed="7.515025"/>
+</test>
+<status status="PASS" start="2025-03-23T23:06:46.205046" elapsed="7.776544"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="1" fail="0" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
