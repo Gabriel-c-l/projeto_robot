@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    ../../libraries/FakerLibrary.py
+Library    FakerLibrary
 Library    OperatingSystem
 Resource   ../../resources/variables/variables.robot
 Resource   ../../resources/keywords/keywords.robot

@@ -1,3 +1,10 @@
+*** Settings ***
+Library    SeleniumLibrary
+Library    FakerLibrary
+Library    OperatingSystem
+Resource   ../variables/variables.robot
+
+
 *** Keywords ***
 Acessar Tela Inicial
     [Documentation]    Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."
