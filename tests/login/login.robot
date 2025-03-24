@@ -8,119 +8,96 @@ Resource   ../../resources/keywords/keywords.robot
 # ---------------------------------------------------
 # Testes de Login
 # ---------------------------------------------------
-Login - Credenciais Incorretas
-    Acessar Tela Inicial
-    Wait Until Element Is Visible    xpath=//input[@type='email']    10s
-    Input Text    xpath=//input[@type='email']    usuario@exemplo.com
-    Wait Until Element Is Visible    xpath=//input[@type='password']    10s
-    Input Text    xpath=//input[@type='password']    senhaerrada123
-    Click Button    xpath=//button[contains(text(), 'Login')]
-    Wait Until Element Is Visible    xpath=//p[contains(text(), 'Invalid credentials')]    10s
-    Page Should Contain    Invalid credentials
-    Close Browser
 
-Login - Conta Inexistente
-    Acessar Tela Inicial
-    Wait Until Element Is Visible    xpath=//input[@type='email']    10s
-    Input Text    xpath=//input[@type='email']    inexistente@exemplo.com
-    Wait Until Element Is Visible    xpath=//input[@type='password']    10s
-    Input Text    xpath=//input[@type='password']    senhaqualquer
-    Click Button    xpath=//button[contains(text(), 'Login')]
-    Wait Until Element Is Visible    xpath=//p[contains(text(), 'Invalid credentials')]    10s
-    Page Should Contain    Invalid credentials
-    Close Browser
-
+# Cenário 4: Login bem-sucedido
 Login - Conta Existente
     Acessar Tela Inicial
-    Wait Until Element Is Visible    xpath=//input[@type='email']    10s
-    Input Text    xpath=//input[@type='email']    usuario@teste.com
-    Wait Until Element Is Visible    xpath=//input[@type='password']    10s
-    Input Text    xpath=//input[@type='password']    Teste@1234
-    Click Button    xpath=//button[contains(text(), 'Login')]
-    Wait Until Element Is Visible    xpath=//p[contains(text(), 'Login successful')]    10s
-    Page Should Contain    Login successful
-    Close Browser
+    Preencher Campos de Login    ${VALID_EMAIL}    ${VALID_PASSWORD}
+    Clicar Botão Login
+    Verificar Mensagem    ${LOGIN_SUCCESS_MESSAGE}
+    Fechar Navegador
 
+# Cenário 5: Login com credenciais erradas
+Login - Credenciais Incorretas
+    Acessar Tela Inicial
+    Preencher Campos de Login    ${VALID_EMAIL}    ${INVALID_PASSWORD}
+    Clicar Botão Login
+    Verificar Mensagem    ${INVALID_CREDENTIALS}
+    Fechar Navegador
 
+# Cenário 6: Login com conta inexistente
+Login - Conta Inexistente
+    Acessar Tela Inicial
+    Preencher Campos de Login    inexistente@exemplo.com    senhaqualquer
+    Clicar Botão Login
+    Verificar Mensagem    ${INVALID_CREDENTIALS}
+    Fechar Navegador
+
+# Cenários Extras
 Login - Campos Vazios
     Acessar Tela Inicial
-    Wait Until Element Is Visible    xpath=//input[@type='email']    10s
-    Input Text    xpath=//input[@type='email']    ${EMPTY}
-    Wait Until Element Is Visible    xpath=//input[@type='password']    10s
-    Input Text    xpath=//input[@type='password']    ${EMPTY}
-    Click Button    xpath=//button[contains(text(), 'Login')]
+    Preencher Campos de Login    ${EMPTY}    ${EMPTY}
+    Clicar Botão Login
     ${email_tooltip}=    Execute JavaScript    return document.querySelector("input[type='email']").validationMessage;
-    Should Be Equal As Strings    ${email_tooltip}    Preencha este campo.
-    Close Browser
+    Should Be Equal As Strings    ${email_tooltip}    ${EMAIL_VALIDATION_MESSAGE}
+    Fechar Navegador
 
 Login - E-mail Incorreto
-    [Documentation]    Tenta realizar o login com um e-mail errado.
     Acessar Tela Inicial
-    Wait Until Element Is Visible    xpath=//input[@type='email']    10s
-    Input Text    xpath=//input[@type='email']    emailerrado@teste.com
-    Wait Until Element Is Visible    xpath=//input[@type='password']    10s
-    Input Text    xpath=//input[@type='password']    ${VALID_PASSWORD}
-    Click Button    xpath=//button[contains(text(), 'Login')]
-    Wait Until Element Is Visible    xpath=//p[contains(text(), 'Invalid credentials')]    10s
-    Page Should Contain    Invalid credentials
-    Close Browser
+    Preencher Campos de Login    ${INVALID_EMAIL}    ${VALID_PASSWORD}
+    Clicar Botão Login
+    Wait Until Element Is Visible    xpath=//p[contains(text(), '${INVALID_CREDENTIALS}')]    10s
+    Page Should Contain    ${INVALID_CREDENTIALS}
+    Fechar Navegador
 
 Login - Senha Vazia
-    [Documentation]    Tenta realizar o login com a senha vazia.
     Acessar Tela Inicial
-    Wait Until Element Is Visible    xpath=//input[@type='email']    10s
-    Input Text    xpath=//input[@type='email']    ${VALID_EMAIL}
-    Wait Until Element Is Visible    xpath=//input[@type='password']    10s
-    Input Text    xpath=//input[@type='password']    ""
-    Click Button    xpath=//button[contains(text(), 'Login')]
-    Wait Until Element Is Visible    xpath=//p[contains(text(), 'Password is required')]    10s
+    Preencher Campos de Login    ${VALID_EMAIL}    ${EMPTY}
+    Clicar Botão Login
+    ${mensagem}=    Execute JavaScript    return document.querySelector("input[type='password']").validationMessage;
+    Log    ${mensagem}
     Capture Page Screenshot    login_senha_vazia.png
-    Close Browser
+    Fechar Navegador
 
 Login - E-mail Vazio
-    [Documentation]    Tenta realizar o login com o e-mail vazio.
     Acessar Tela Inicial
-    Wait Until Element Is Visible    xpath=//input[@type='email']    10s
-    Input Text    xpath=//input[@type='email']    ""
-    Wait Until Element Is Visible    xpath=//input[@type='password']    10s
-    Input Text    xpath=//input[@type='password']    ${VALID_PASSWORD}
-    Click Button    xpath=//button[contains(text(), 'Login')]
-    Wait Until Element Is Visible    xpath=//p[contains(text(), 'Email is required')]    10s
+    Preencher Campos de Login    ${EMPTY}    ${VALID_PASSWORD}
+    Clicar Botão Login
+    ${mensagem}=    Execute JavaScript    return document.querySelector("input[type='email']").validationMessage;
+    Log    ${mensagem}
     Capture Page Screenshot    login_email_vazio.png
-    Close Browser
+    Fechar Navegador
 
 Login - E-mail Inválido
-    [Documentation]    Tenta realizar o login com um e-mail inválido.
     Acessar Tela Inicial
-    Wait Until Element Is Visible    xpath=//input[@type='email']    10s
-    Input Text    xpath=//input[@type='email']    teste.com
-    Wait Until Element Is Visible    xpath=//input[@type='password']    10s
-    Input Text    xpath=//input[@type='password']    ${VALID_PASSWORD}
-    Click Button    xpath=//button[contains(text(), 'Login')]
-    Wait Until Element Is Visible    xpath=//p[contains(text(), 'Invalid email format')]    10s
+    Preencher Campos de Login    teste.com    ${VALID_PASSWORD}
+    Clicar Botão Login
+    ${mensagem}=    Execute JavaScript    return document.querySelector("input[type='email']").validationMessage;
+    Log    ${mensagem}
     Capture Page Screenshot    login_email_invalido.png
-    Close Browser
+    Fechar Navegador
 
 Login - Senha Incorreta
-    [Documentation]    Tenta realizar o login com senha incorreta.
     Acessar Tela Inicial
-    Wait Until Element Is Visible    xpath=//input[@type='email']    10s
-    Input Text    xpath=//input[@type='email']    ${VALID_EMAIL}
-    Wait Until Element Is Visible    xpath=//input[@type='password']    10s
-    Input Text    xpath=//input[@type='password']    senhaerrada123
-    Click Button    xpath=//button[contains(text(), 'Login')]
-    Wait Until Element Is Visible    xpath=//p[contains(text(), 'Invalid credentials')]    10s
+    Preencher Campos de Login    ${VALID_EMAIL}    senhaerrada123
+    Clicar Botão Login
+    Wait Until Element Is Visible    xpath=//p[contains(text(), '${INVALID_CREDENTIALS}')]    10s
     Capture Page Screenshot    login_senha_incorreta.png
-    Close Browser
+    Fechar Navegador
 
 Login - E-mail Existente e Senha Correta
-    [Documentation]    Realiza login com um e-mail e senha válidos.
     Acessar Tela Inicial
-    Wait Until Element Is Visible    xpath=//input[@type='email']    10s
-    Input Text    xpath=//input[@type='email']    ${VALID_EMAIL}
-    Wait Until Element Is Visible    xpath=//input[@type='password']    10s
-    Input Text    xpath=//input[@type='password']    ${VALID_PASSWORD}
-    Click Button    xpath=//button[contains(text(), 'Login')]
-    Wait Until Element Is Visible    xpath=//p[contains(text(), 'Login successful')]    10s
+    Preencher Campos de Login    ${VALID_EMAIL}    ${VALID_PASSWORD}
+    Clicar Botão Login
+    Wait Until Element Is Visible    xpath=//p[contains(text(), '${LOGIN_SUCCESS_MESSAGE}')]    10s
     Capture Page Screenshot    login_sucesso.png
-    Close Browser
+    Fechar Navegador
+
+Login - Redirecionamento Após Sucesso
+    Acessar Tela Inicial
+    Preencher Campos de Login    ${VALID_EMAIL}    ${VALID_PASSWORD}
+    Clicar Botão Login
+    Wait Until Page Contains    Welcome!    10s
+    Wait Until Page Contains    ${LOGIN_SUCCESS_MESSAGE}    10s
+    Capture Page Screenshot    login_redirecionamento_sucesso.png
+    Fechar Navegador

@@ -29,13 +29,7 @@ pip install -r requirements.txt
    ```sh
    cd projeto_robot
    ```
-3. (Opcional) Crie um ambiente virtual:
-   ```sh
-   python -m venv venv
-   source venv/bin/activate  # Linux/macOS
-   venv\Scripts\activate  # Windows
-   ```
-4. Instale as dependências:
+3. Instale as dependências:
    ```sh
    pip install -r requirements.txt
    ```
@@ -50,6 +44,8 @@ Para rodar os testes, utilize um dos seguintes comandos:
 2. Executando diretamente com Python:
    ```sh
    python -m robot.run -d results tests/cadastro.robot
+   ou
+   python -m robot.run -d results tests/cadastro/cadastro.robot
    ```
 
 Se houver arquivos de configuração específicos, adicionar instruções aqui.
