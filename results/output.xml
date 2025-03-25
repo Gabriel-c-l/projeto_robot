@@ -1,2440 +1,821 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-24T17:08:34.864480" rpa="false" schemaversion="5">
-<suite id="s1" name="Tests" source="C:\Users\ga060224\Desktop\projeto_robot\tests">
-<suite id="s1-s1" name="Cadastro" source="C:\Users\ga060224\Desktop\projeto_robot\tests\cadastro">
-<suite id="s1-s1-s1" name="Cadastro" source="C:\Users\ga060224\Desktop\projeto_robot\tests\cadastro\cadastro.robot">
+<robot generator="Robot 7.2.2 (Python 3.11.2 on win32)" generated="2025-03-24T22:37:02.811586" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\Gabriel\Desktop\Coisas de programaçao\projeto_robot\projeto_robot\tests">
+<suite id="s1-s1" name="Cadastro" source="C:\Users\Gabriel\Desktop\Coisas de programaçao\projeto_robot\projeto_robot\tests\cadastro">
+<suite id="s1-s1-s1" name="Cadastro" source="C:\Users\Gabriel\Desktop\Coisas de programaçao\projeto_robot\projeto_robot\tests\cadastro\cadastro.robot">
 <test id="s1-s1-s1-t1" name="Cadastro - Cadastro com E-mail e Senha" line="14">
 <kw name="Acessar Tela Inicial" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:35.935347" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
+<msg time="2025-03-24T22:37:03.155317" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:08:35.935069" elapsed="3.405828"/>
+<status status="PASS" start="2025-03-24T22:37:03.154319" elapsed="3.102460"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:08:39.341367" elapsed="0.059778"/>
+<status status="PASS" start="2025-03-24T22:37:06.256779" elapsed="0.033909"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:39.401558" elapsed="0.163779"/>
+<status status="PASS" start="2025-03-24T22:37:06.290688" elapsed="0.070895"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:39.566352" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
+<msg time="2025-03-24T22:37:06.361583" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:39.565775" elapsed="0.257051"/>
+<status status="PASS" start="2025-03-24T22:37:06.361583" elapsed="0.051861"/>
 </kw>
 <doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:08:35.933789" elapsed="3.889402"/>
+<status status="PASS" start="2025-03-24T22:37:03.153322" elapsed="3.260122"/>
 </kw>
 <kw name="Acessar Tela de Cadastro" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_CREATE_ACCOUNT}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:39.824993" elapsed="0.049964"/>
+<status status="PASS" start="2025-03-24T22:37:06.414441" elapsed="0.018950"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:39.875859" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
+<msg time="2025-03-24T22:37:06.433391" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
 <arg>${XPATH_CREATE_ACCOUNT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:39.875414" elapsed="0.122874"/>
+<status status="PASS" start="2025-03-24T22:37:06.433391" elapsed="0.045878"/>
 </kw>
 <doc>Clica no botão "Create a new account" para acessar a tela de cadastro.</doc>
-<status status="PASS" start="2025-03-24T17:08:39.824214" elapsed="0.174355"/>
+<status status="PASS" start="2025-03-24T22:37:06.414441" elapsed="0.064828"/>
 </kw>
-<kw name="Email" owner="FakerLibrary">
-<msg time="2025-03-24T17:08:40.000987" level="INFO">${EMAIL} = ujones@example.org</msg>
+<kw name="FakerLibrary.email">
+<msg time="2025-03-24T22:37:06.481262" level="FAIL">No keyword with name 'FakerLibrary.email' found.</msg>
 <var>${EMAIL}</var>
-<status status="PASS" start="2025-03-24T17:08:39.999717" elapsed="0.001393"/>
+<status status="FAIL" start="2025-03-24T22:37:06.481262" elapsed="0.000000">No keyword with name 'FakerLibrary.email' found.</status>
 </kw>
 <kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:40.004494" elapsed="0.033423"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:40.038526" level="INFO">Typing text 'ujones@example.org' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:40.038192" elapsed="0.164555"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:40.202979" elapsed="0.023032"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:40.226569" level="INFO">Typing text 'Teste@1234' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:40.226249" elapsed="0.101746"/>
-</kw>
 <arg>${EMAIL}</arg>
 <arg>${STRONG_PASSWORD}</arg>
 <doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:08:40.003480" elapsed="0.324797"/>
+<status status="NOT RUN" start="2025-03-24T22:37:06.482261" elapsed="0.000000"/>
 </kw>
 <kw name="Clicar Botão Signup" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:40.329895" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
-<arg>${XPATH_SIGNUP_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:40.329419" elapsed="0.113094"/>
-</kw>
 <doc>Clica no botão de cadastro (Signup).</doc>
-<status status="PASS" start="2025-03-24T17:08:40.328832" elapsed="0.113837"/>
+<status status="NOT RUN" start="2025-03-24T22:37:06.482261" elapsed="0.000000"/>
 </kw>
 <kw name="Verificar Redirecionamento Cadastro" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_WELCOME_MESSAGE}</arg>
-<arg>15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:40.443707" elapsed="1.274170"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_BACK_TO_LOGIN}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:41.718061" elapsed="0.022258"/>
-</kw>
 <doc>Verifica se o redirecionamento após cadastro foi bem-sucedido.</doc>
-<status status="PASS" start="2025-03-24T17:08:40.443175" elapsed="1.297278"/>
+<status status="NOT RUN" start="2025-03-24T22:37:06.482261" elapsed="0.000000"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:41.868199" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cadastro_faker.png"&gt;&lt;img src="cadastro_faker.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>cadastro_faker.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:08:41.740805" elapsed="0.127503"/>
+<status status="NOT RUN" start="2025-03-24T22:37:06.482261" elapsed="0.000000"/>
 </kw>
 <kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:08:41.869271" elapsed="2.320565"/>
-</kw>
 <doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:08:41.868794" elapsed="2.321234"/>
+<status status="NOT RUN" start="2025-03-24T22:37:06.483258" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-03-24T17:08:35.932973" elapsed="8.257433"/>
+<status status="FAIL" start="2025-03-24T22:37:03.153322" elapsed="3.329936">No keyword with name 'FakerLibrary.email' found.</status>
 </test>
 <test id="s1-s1-s1-t2" name="Cadastro - Senha Vazia" line="25">
 <kw name="Acessar Tela Inicial" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:44.192608" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
+<msg time="2025-03-24T22:37:06.485252" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:08:44.192374" elapsed="3.368651"/>
+<status status="PASS" start="2025-03-24T22:37:06.484254" elapsed="1.481412"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:08:47.561478" elapsed="0.041057"/>
+<status status="PASS" start="2025-03-24T22:37:07.965666" elapsed="0.030917"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:47.602768" elapsed="0.046062"/>
+<status status="PASS" start="2025-03-24T22:37:07.997580" elapsed="0.015958"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:47.649386" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
+<msg time="2025-03-24T22:37:08.013538" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:47.649074" elapsed="0.147176"/>
+<status status="PASS" start="2025-03-24T22:37:08.013538" elapsed="0.069814"/>
 </kw>
 <doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:08:44.192046" elapsed="3.604641"/>
+<status status="PASS" start="2025-03-24T22:37:06.484254" elapsed="1.599098"/>
 </kw>
 <kw name="Acessar Tela de Cadastro" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_CREATE_ACCOUNT}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:47.797640" elapsed="0.035776"/>
+<status status="PASS" start="2025-03-24T22:37:08.084349" elapsed="0.220686"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:47.834176" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
+<msg time="2025-03-24T22:37:08.306031" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
 <arg>${XPATH_CREATE_ACCOUNT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:47.833749" elapsed="0.118326"/>
+<status status="PASS" start="2025-03-24T22:37:08.305035" elapsed="0.040890"/>
 </kw>
 <doc>Clica no botão "Create a new account" para acessar a tela de cadastro.</doc>
-<status status="PASS" start="2025-03-24T17:08:47.797162" elapsed="0.155127"/>
+<status status="PASS" start="2025-03-24T22:37:08.084349" elapsed="0.261576"/>
 </kw>
-<kw name="Email" owner="FakerLibrary">
-<msg time="2025-03-24T17:08:47.953497" level="INFO">${EMAIL} = stephanie98@example.net</msg>
+<kw name="FakerLibrary.email">
+<msg time="2025-03-24T22:37:08.347921" level="FAIL">No keyword with name 'FakerLibrary.email' found.</msg>
 <var>${EMAIL}</var>
-<status status="PASS" start="2025-03-24T17:08:47.952675" elapsed="0.000924"/>
+<status status="FAIL" start="2025-03-24T22:37:08.347921" elapsed="0.000996">No keyword with name 'FakerLibrary.email' found.</status>
 </kw>
 <kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:47.956433" elapsed="0.043346"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:48.000445" level="INFO">Typing text 'stephanie98@example.net' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:48.000050" elapsed="0.199590"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:48.200047" elapsed="0.039081"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:48.240141" level="INFO">Typing text '' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:48.239549" elapsed="0.117737"/>
-</kw>
 <arg>${EMAIL}</arg>
 <arg>${EMPTY}</arg>
 <doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:08:47.954271" elapsed="0.403291"/>
+<status status="NOT RUN" start="2025-03-24T22:37:08.348917" elapsed="0.000000"/>
 </kw>
 <kw name="Clicar Botão Signup" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:48.359179" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
-<arg>${XPATH_SIGNUP_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:48.358840" elapsed="0.137795"/>
-</kw>
 <doc>Clica no botão de cadastro (Signup).</doc>
-<status status="PASS" start="2025-03-24T17:08:48.358224" elapsed="0.138630"/>
+<status status="NOT RUN" start="2025-03-24T22:37:08.348917" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//input[@type='password'][@required]</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:48.497325" elapsed="0.035745"/>
+<status status="NOT RUN" start="2025-03-24T22:37:08.349915" elapsed="0.000000"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:48.941502" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cadastro_senha_vazia.png"&gt;&lt;img src="cadastro_senha_vazia.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>cadastro_senha_vazia.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:08:48.533626" elapsed="0.408004"/>
+<status status="NOT RUN" start="2025-03-24T22:37:08.349915" elapsed="0.000000"/>
 </kw>
 <kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:08:48.942392" elapsed="2.276798"/>
-</kw>
 <doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:08:48.942078" elapsed="2.277321"/>
+<status status="NOT RUN" start="2025-03-24T22:37:08.349915" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-03-24T17:08:44.191537" elapsed="7.028276"/>
+<status status="FAIL" start="2025-03-24T22:37:06.484254" elapsed="1.866658">No keyword with name 'FakerLibrary.email' found.</status>
 </test>
 <test id="s1-s1-s1-t3" name="Cadastro - E-mail Vazio" line="35">
 <kw name="Acessar Tela Inicial" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:51.221904" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
+<msg time="2025-03-24T22:37:08.351909" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:08:51.221666" elapsed="3.356267"/>
+<status status="PASS" start="2025-03-24T22:37:08.351909" elapsed="1.402123"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:08:54.578338" elapsed="0.060762"/>
+<status status="PASS" start="2025-03-24T22:37:09.754032" elapsed="0.025933"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:54.639591" elapsed="0.062719"/>
+<status status="PASS" start="2025-03-24T22:37:09.779965" elapsed="0.015465"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:54.703466" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
+<msg time="2025-03-24T22:37:09.795430" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:54.702795" elapsed="0.161644"/>
+<status status="PASS" start="2025-03-24T22:37:09.795430" elapsed="0.060837"/>
 </kw>
 <doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:08:51.221346" elapsed="3.643295"/>
+<status status="PASS" start="2025-03-24T22:37:08.351909" elapsed="1.504358"/>
 </kw>
 <kw name="Acessar Tela de Cadastro" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_CREATE_ACCOUNT}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:54.865788" elapsed="0.040695"/>
+<status status="PASS" start="2025-03-24T22:37:09.857264" elapsed="0.219414"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:54.907475" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
+<msg time="2025-03-24T22:37:10.076678" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
 <arg>${XPATH_CREATE_ACCOUNT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:54.906952" elapsed="0.146495"/>
+<status status="PASS" start="2025-03-24T22:37:10.076678" elapsed="0.039894"/>
 </kw>
 <doc>Clica no botão "Create a new account" para acessar a tela de cadastro.</doc>
-<status status="PASS" start="2025-03-24T17:08:54.865238" elapsed="0.188561"/>
+<status status="PASS" start="2025-03-24T22:37:09.856267" elapsed="0.260305"/>
 </kw>
 <kw name="Preencher Campos de Login" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_EMAIL_INPUT}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:55.055687" elapsed="0.027189"/>
+<status status="PASS" start="2025-03-24T22:37:10.117568" elapsed="0.012619"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:55.083550" level="INFO">Typing text '' into text field 'xpath=//input[@type='email']'.</msg>
-<msg time="2025-03-24T17:08:55.287780" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-03-24T17:08:55.288065" level="FAIL">StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=134.0.6998.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF75A314C25+3179557]
-	(No symbol) [0x00007FF759F788A0]
-	(No symbol) [0x00007FF759E091CA]
-	(No symbol) [0x00007FF759E10B98]
-	(No symbol) [0x00007FF759E13BCC]
-	(No symbol) [0x00007FF759E13C9F]
-	(No symbol) [0x00007FF759E61BAD]
-	(No symbol) [0x00007FF759E54DBC]
-	(No symbol) [0x00007FF759E87C2A]
-	(No symbol) [0x00007FF759E522D6]
-	(No symbol) [0x00007FF759E87E40]
-	(No symbol) [0x00007FF759EB02F3]
-	(No symbol) [0x00007FF759E87A03]
-	(No symbol) [0x00007FF759E506D0]
-	(No symbol) [0x00007FF759E51983]
-	GetHandleVerifier [0x00007FF75A3767CD+3579853]
-	GetHandleVerifier [0x00007FF75A38D1D2+3672530]
-	GetHandleVerifier [0x00007FF75A382153+3627347]
-	GetHandleVerifier [0x00007FF75A0E092A+868650]
-	(No symbol) [0x00007FF759F82FFF]
-	(No symbol) [0x00007FF759F7F4A4]
-	(No symbol) [0x00007FF759F7F646]
-	(No symbol) [0x00007FF759F6EAA9]
-	BaseThreadInitThunk [0x00007FF9ADB0259D+29]
-	RtlUserThreadStart [0x00007FF9AFCCAF38+40]
-</msg>
+<msg time="2025-03-24T22:37:10.130187" level="INFO">Typing text '' into text field 'xpath=//input[@type='email']'.</msg>
 <arg>${XPATH_EMAIL_INPUT}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="FAIL" start="2025-03-24T17:08:55.083152" elapsed="0.245812">StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=134.0.6998.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF75A314C25+3179557]
-	(No symbol) [0x00007FF759F788A0]
-	(No symbol) [0x00007FF759E091CA]
-	(No symbol) [0x00007FF759E10B98]
-	(No symbol) [0x00007FF759E13BCC]
-	(No symbol) [0x00007FF759E13C9F]
-	(No symbol) [0x00007FF759E61BAD]
-	(No symbol) [0x00007FF759E54DBC]
-	(No symbol) [0x00007FF759E87C2A]
-	(No symbol) [0x00007FF759E522D6]
-	(No symbol) [0x00007FF759E87E40]
-	(No symbol) [0x00007FF759EB02F3]
-	(No symbol) [0x00007FF759E87A03]
-	(No symbol) [0x00007FF759E506D0]
-	(No symbol) [0x00007FF759E51983]
-	GetHandleVerifier [0x00007FF75A3767CD+3579853]
-	GetHandleVerifier [0x00007FF75A38D1D2+3672530]
-	GetHandleVerifier [0x00007FF75A382153+3627347]
-	GetHandleVerifier [0x00007FF75A0E092A+868650]
-	(No symbol) [0x00007FF759F82FFF]
-	(No symbol) [0x00007FF759F7F4A4]
-	(No symbol) [0x00007FF759F7F646]
-	(No symbol) [0x00007FF759F6EAA9]
-	BaseThreadInitThunk [0x00007FF9ADB0259D+29]
-	RtlUserThreadStart [0x00007FF9AFCCAF38+40]
-</status>
+<status status="PASS" start="2025-03-24T22:37:10.130187" elapsed="0.048869"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_PASSWORD_INPUT}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2025-03-24T17:08:55.329221" elapsed="0.000066"/>
+<status status="PASS" start="2025-03-24T22:37:10.179056" elapsed="0.012965"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-24T22:37:10.192021" level="INFO">Typing text 'Teste@1234' into text field 'xpath=//input[@type='password']'.</msg>
 <arg>${XPATH_PASSWORD_INPUT}</arg>
 <arg>${senha}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-03-24T17:08:55.329435" elapsed="0.000039"/>
+<status status="PASS" start="2025-03-24T22:37:10.192021" elapsed="0.047875"/>
 </kw>
 <arg>${EMPTY}</arg>
 <arg>${STRONG_PASSWORD}</arg>
 <doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="FAIL" start="2025-03-24T17:08:55.054432" elapsed="0.275238">StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=134.0.6998.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF75A314C25+3179557]
-	(No symbol) [0x00007FF759F788A0]
-	(No symbol) [0x00007FF759E091CA]
-	(No symbol) [0x00007FF759E10B98]
-	(No symbol) [0x00007FF759E13BCC]
-	(No symbol) [0x00007FF759E13C9F]
-	(No symbol) [0x00007FF759E61BAD]
-	(No symbol) [0x00007FF759E54DBC]
-	(No symbol) [0x00007FF759E87C2A]
-	(No symbol) [0x00007FF759E522D6]
-	(No symbol) [0x00007FF759E87E40]
-	(No symbol) [0x00007FF759EB02F3]
-	(No symbol) [0x00007FF759E87A03]
-	(No symbol) [0x00007FF759E506D0]
-	(No symbol) [0x00007FF759E51983]
-	GetHandleVerifier [0x00007FF75A3767CD+3579853]
-	GetHandleVerifier [0x00007FF75A38D1D2+3672530]
-	GetHandleVerifier [0x00007FF75A382153+3627347]
-	GetHandleVerifier [0x00007FF75A0E092A+868650]
-	(No symbol) [0x00007FF759F82FFF]
-	(No symbol) [0x00007FF759F7F4A4]
-	(No symbol) [0x00007FF759F7F646]
-	(No symbol) [0x00007FF759F6EAA9]
-	BaseThreadInitThunk [0x00007FF9ADB0259D+29]
-	RtlUserThreadStart [0x00007FF9AFCCAF38+40]
-</status>
+<status status="PASS" start="2025-03-24T22:37:10.116572" elapsed="0.123324"/>
 </kw>
 <kw name="Clicar Botão Signup" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-24T22:37:10.239896" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
+<arg>${XPATH_SIGNUP_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-24T22:37:10.239896" elapsed="0.050865"/>
+</kw>
 <doc>Clica no botão de cadastro (Signup).</doc>
-<status status="NOT RUN" start="2025-03-24T17:08:55.330136" elapsed="0.000055"/>
+<status status="PASS" start="2025-03-24T22:37:10.239896" elapsed="0.050865"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//input[@type='email'][@required]</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2025-03-24T17:08:55.330677" elapsed="0.000076"/>
+<status status="PASS" start="2025-03-24T22:37:10.291758" elapsed="0.011967"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-24T22:37:10.535671" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cadastro_email_vazio.png"&gt;&lt;img src="cadastro_email_vazio.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>cadastro_email_vazio.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" start="2025-03-24T17:08:55.331227" elapsed="0.000054"/>
+<status status="PASS" start="2025-03-24T22:37:10.303725" elapsed="0.231946"/>
 </kw>
 <kw name="Fechar Navegador" owner="keywords">
-<doc>Fecha o navegador.</doc>
-<status status="NOT RUN" start="2025-03-24T17:08:55.331617" elapsed="0.000052"/>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-24T22:37:10.535671" elapsed="2.086509"/>
 </kw>
-<status status="FAIL" start="2025-03-24T17:08:51.220846" elapsed="4.111181">StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=134.0.6998.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF75A314C25+3179557]
-	(No symbol) [0x00007FF759F788A0]
-	(No symbol) [0x00007FF759E091CA]
-	(No symbol) [0x00007FF759E10B98]
-	(No symbol) [0x00007FF759E13BCC]
-	(No symbol) [0x00007FF759E13C9F]
-	(No symbol) [0x00007FF759E61BAD]
-	(No symbol) [0x00007FF759E54DBC]
-	(No symbol) [0x00007FF759E87C2A]
-	(No symbol) [0x00007FF759E522D6]
-	(No symbol) [0x00007FF759E87E40]
-	(No symbol) [0x00007FF759EB02F3]
-	(No symbol) [0x00007FF759E87A03]
-	(No symbol) [0x00007FF759E506D0]
-	(No symbol) [0x00007FF759E51983]
-	GetHandleVerifier [0x00007FF75A3767CD+3579853]
-	GetHandleVerifier [0x00007FF75A38D1D2+3672530]
-	GetHandleVerifier [0x00007FF75A382153+3627347]
-	GetHandleVerifier [0x00007FF75A0E092A+868650]
-	(No symbol) [0x00007FF759F82FFF]
-	(No symbol) [0x00007FF759F7F4A4]
-	(No symbol) [0x00007FF759F7F646]
-	(No symbol) [0x00007FF759F6EAA9]
-	BaseThreadInitThunk [0x00007FF9ADB0259D+29]
-	RtlUserThreadStart [0x00007FF9AFCCAF38+40]
-</status>
+<doc>Fecha o navegador.</doc>
+<status status="PASS" start="2025-03-24T22:37:10.535671" elapsed="2.086509"/>
+</kw>
+<status status="PASS" start="2025-03-24T22:37:08.350912" elapsed="4.272265"/>
 </test>
 <test id="s1-s1-s1-t4" name="Cadastro - Formato de E-mail Inválido" line="45">
 <kw name="Acessar Tela Inicial" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:55.338622" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
+<msg time="2025-03-24T22:37:12.624175" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:08:55.338368" elapsed="3.618161"/>
+<status status="PASS" start="2025-03-24T22:37:12.624175" elapsed="1.350568"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:08:58.957009" elapsed="0.061111"/>
+<status status="PASS" start="2025-03-24T22:37:13.974743" elapsed="0.031914"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:59.018657" elapsed="0.088475"/>
+<status status="PASS" start="2025-03-24T22:37:14.006657" elapsed="0.014961"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:59.108264" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
+<msg time="2025-03-24T22:37:14.021618" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:59.107690" elapsed="0.204982"/>
+<status status="PASS" start="2025-03-24T22:37:14.021618" elapsed="0.054853"/>
 </kw>
 <doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:08:55.338007" elapsed="3.974961"/>
+<status status="PASS" start="2025-03-24T22:37:12.624175" elapsed="1.452296"/>
 </kw>
 <kw name="Acessar Tela de Cadastro" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_CREATE_ACCOUNT}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:59.314442" elapsed="0.050201"/>
+<status status="PASS" start="2025-03-24T22:37:14.077467" elapsed="0.220411"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:59.365590" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
+<msg time="2025-03-24T22:37:14.298876" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
 <arg>${XPATH_CREATE_ACCOUNT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:59.365065" elapsed="0.164812"/>
+<status status="PASS" start="2025-03-24T22:37:14.297878" elapsed="0.041888"/>
 </kw>
 <doc>Clica no botão "Create a new account" para acessar a tela de cadastro.</doc>
-<status status="PASS" start="2025-03-24T17:08:59.313844" elapsed="0.216302"/>
+<status status="PASS" start="2025-03-24T22:37:14.077467" elapsed="0.262299"/>
 </kw>
 <kw name="Preencher Campos de Login" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_EMAIL_INPUT}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:59.532309" elapsed="0.044713"/>
+<status status="PASS" start="2025-03-24T22:37:14.340765" elapsed="0.012964"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:59.578084" level="INFO">Typing text 'teste.com' into text field 'xpath=//input[@type='email']'.</msg>
+<msg time="2025-03-24T22:37:14.354727" level="INFO">Typing text 'teste.com' into text field 'xpath=//input[@type='email']'.</msg>
 <arg>${XPATH_EMAIL_INPUT}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:59.577478" elapsed="0.230506"/>
+<status status="PASS" start="2025-03-24T22:37:14.353729" elapsed="0.068816"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_PASSWORD_INPUT}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:08:59.808245" elapsed="0.027440"/>
+<status status="PASS" start="2025-03-24T22:37:14.422545" elapsed="0.012965"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:59.836701" level="INFO">Typing text 'Teste@1234' into text field 'xpath=//input[@type='password']'.</msg>
+<msg time="2025-03-24T22:37:14.435510" level="INFO">Typing text 'Teste@1234' into text field 'xpath=//input[@type='password']'.</msg>
 <arg>${XPATH_PASSWORD_INPUT}</arg>
 <arg>${senha}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:59.836128" elapsed="0.148759"/>
+<status status="PASS" start="2025-03-24T22:37:14.435510" elapsed="0.046875"/>
 </kw>
 <arg>teste.com</arg>
 <arg>${STRONG_PASSWORD}</arg>
 <doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:08:59.531286" elapsed="0.453844"/>
+<status status="PASS" start="2025-03-24T22:37:14.340765" elapsed="0.141620"/>
 </kw>
 <kw name="Clicar Botão Signup" owner="keywords">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:08:59.986962" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
+<msg time="2025-03-24T22:37:14.482385" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
 <arg>${XPATH_SIGNUP_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:08:59.986488" elapsed="0.156240"/>
+<status status="PASS" start="2025-03-24T22:37:14.482385" elapsed="0.055261"/>
 </kw>
 <doc>Clica no botão de cadastro (Signup).</doc>
-<status status="PASS" start="2025-03-24T17:08:59.985795" elapsed="0.157148"/>
+<status status="PASS" start="2025-03-24T22:37:14.482385" elapsed="0.055261"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//input[@type='email'][@required]</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:00.143494" elapsed="0.060497"/>
+<status status="PASS" start="2025-03-24T22:37:14.537646" elapsed="0.015958"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:00.645360" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cadastro_email_invalido.png"&gt;&lt;img src="cadastro_email_invalido.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-24T22:37:14.802448" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cadastro_email_invalido.png"&gt;&lt;img src="cadastro_email_invalido.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>cadastro_email_invalido.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:09:00.204397" elapsed="0.441122"/>
+<status status="PASS" start="2025-03-24T22:37:14.554602" elapsed="0.248842"/>
 </kw>
 <kw name="Fechar Navegador" owner="keywords">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:09:00.646371" elapsed="3.366546"/>
+<status status="PASS" start="2025-03-24T22:37:14.803444" elapsed="2.087683"/>
 </kw>
 <doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:09:00.645987" elapsed="3.367060"/>
+<status status="PASS" start="2025-03-24T22:37:14.803444" elapsed="2.087683"/>
 </kw>
-<status status="PASS" start="2025-03-24T17:08:55.337326" elapsed="8.676062"/>
+<status status="PASS" start="2025-03-24T22:37:12.623177" elapsed="4.267950"/>
 </test>
 <test id="s1-s1-s1-t5" name="Cadastro - Dados Muito Longos" line="55">
 <kw name="Acessar Tela Inicial" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:04.015600" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
+<msg time="2025-03-24T22:37:16.892120" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:09:04.015401" elapsed="3.882049"/>
+<status status="PASS" start="2025-03-24T22:37:16.892120" elapsed="1.355965"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:09:07.897895" elapsed="0.121379"/>
+<status status="PASS" start="2025-03-24T22:37:18.248085" elapsed="0.029921"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:08.019646" elapsed="0.058644"/>
+<status status="PASS" start="2025-03-24T22:37:18.278006" elapsed="0.020943"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:08.079174" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
+<msg time="2025-03-24T22:37:18.298949" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:08.078680" elapsed="0.191563"/>
+<status status="PASS" start="2025-03-24T22:37:18.298949" elapsed="0.080784"/>
 </kw>
 <doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:09:04.015103" elapsed="4.255410"/>
+<status status="PASS" start="2025-03-24T22:37:16.892120" elapsed="1.487613"/>
 </kw>
 <kw name="Acessar Tela de Cadastro" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_CREATE_ACCOUNT}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:08.271874" elapsed="0.256234"/>
+<status status="PASS" start="2025-03-24T22:37:18.379733" elapsed="0.027925"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:08.528991" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
+<msg time="2025-03-24T22:37:18.408656" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
 <arg>${XPATH_CREATE_ACCOUNT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:08.528564" elapsed="0.141998"/>
+<status status="PASS" start="2025-03-24T22:37:18.408656" elapsed="0.039893"/>
 </kw>
 <doc>Clica no botão "Create a new account" para acessar a tela de cadastro.</doc>
-<status status="PASS" start="2025-03-24T17:09:08.271257" elapsed="0.399608"/>
+<status status="PASS" start="2025-03-24T22:37:18.379733" elapsed="0.068816"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-03-24T17:09:08.672174" level="INFO">${LONG_EMAIL} = aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@teste.com</msg>
+<msg time="2025-03-24T22:37:18.449546" level="INFO">${LONG_EMAIL} = aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@teste.com</msg>
 <var>${LONG_EMAIL}</var>
 <arg>"{}@teste.com".format("a" * 100)</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-03-24T17:09:08.671513" elapsed="0.000771"/>
+<status status="PASS" start="2025-03-24T22:37:18.448549" elapsed="0.000997"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-03-24T17:09:08.673522" level="INFO">${LONG_PASSWORD} = PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP</msg>
+<msg time="2025-03-24T22:37:18.449546" level="INFO">${LONG_PASSWORD} = PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP</msg>
 <var>${LONG_PASSWORD}</var>
 <arg>"P" * 101</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-03-24T17:09:08.672958" elapsed="0.000671"/>
+<status status="PASS" start="2025-03-24T22:37:18.449546" elapsed="0.000000"/>
 </kw>
 <kw name="Preencher Campos de Login" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-03-24T22:37:18.470490" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
 <arg>${XPATH_EMAIL_INPUT}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:08.675072" elapsed="0.039559"/>
+<status status="PASS" start="2025-03-24T22:37:18.449546" elapsed="0.229387"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:08.715726" level="INFO">Typing text 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@teste.com' into text field 'xpath=//input[@type='email']'.</msg>
+<msg time="2025-03-24T22:37:18.678933" level="INFO">Typing text 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@teste.com' into text field 'xpath=//input[@type='email']'.</msg>
 <arg>${XPATH_EMAIL_INPUT}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:08.715094" elapsed="0.683022"/>
+<status status="PASS" start="2025-03-24T22:37:18.678933" elapsed="0.145611"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_PASSWORD_INPUT}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:09.398818" elapsed="0.036558"/>
+<status status="PASS" start="2025-03-24T22:37:18.824544" elapsed="0.015958"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:09.436047" level="INFO">Typing text 'PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP' into text field 'xpath=//input[@type='password']'.</msg>
+<msg time="2025-03-24T22:37:18.840502" level="INFO">Typing text 'PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP' into text field 'xpath=//input[@type='password']'.</msg>
 <arg>${XPATH_PASSWORD_INPUT}</arg>
 <arg>${senha}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:09.435669" elapsed="0.505977"/>
+<status status="PASS" start="2025-03-24T22:37:18.840502" elapsed="0.132644"/>
 </kw>
 <arg>${LONG_EMAIL}</arg>
 <arg>${LONG_PASSWORD}</arg>
 <doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:09:08.674115" elapsed="1.268069"/>
+<status status="PASS" start="2025-03-24T22:37:18.449546" elapsed="0.523600"/>
 </kw>
 <kw name="Clicar Botão Signup" owner="keywords">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:09.944512" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
+<msg time="2025-03-24T22:37:18.974144" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
 <arg>${XPATH_SIGNUP_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:09.943906" elapsed="0.165146"/>
+<status status="PASS" start="2025-03-24T22:37:18.974144" elapsed="0.057845"/>
 </kw>
 <doc>Clica no botão de cadastro (Signup).</doc>
-<status status="PASS" start="2025-03-24T17:09:09.943139" elapsed="0.166077"/>
+<status status="PASS" start="2025-03-24T22:37:18.973146" elapsed="0.058843"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:10.322363" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="long_cadastro.png"&gt;&lt;img src="long_cadastro.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-24T22:37:19.132720" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="long_cadastro.png"&gt;&lt;img src="long_cadastro.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>long_cadastro.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:09:10.109677" elapsed="0.212840"/>
+<status status="PASS" start="2025-03-24T22:37:19.031989" elapsed="0.100731"/>
 </kw>
 <kw name="Fechar Navegador" owner="keywords">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:09:10.323869" elapsed="2.810700"/>
+<status status="PASS" start="2025-03-24T22:37:19.133718" elapsed="2.124323"/>
 </kw>
 <doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:09:10.323165" elapsed="2.811554"/>
+<status status="PASS" start="2025-03-24T22:37:19.132720" elapsed="2.125321"/>
 </kw>
-<status status="PASS" start="2025-03-24T17:09:04.014508" elapsed="9.120573"/>
+<status status="PASS" start="2025-03-24T22:37:16.892120" elapsed="4.365921"/>
 </test>
 <test id="s1-s1-s1-t6" name="Cadastro - Dados Muito Curtos" line="65">
 <kw name="Acessar Tela Inicial" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:13.137566" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
+<msg time="2025-03-24T22:37:21.259033" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:09:13.137210" elapsed="3.449985"/>
+<status status="PASS" start="2025-03-24T22:37:21.259033" elapsed="1.346400"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:09:16.588056" elapsed="0.277522"/>
+<status status="PASS" start="2025-03-24T22:37:22.605433" elapsed="0.020945"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:16.865978" elapsed="0.105033"/>
+<status status="PASS" start="2025-03-24T22:37:22.626378" elapsed="0.039893"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:16.971944" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
+<msg time="2025-03-24T22:37:22.667269" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:16.971418" elapsed="0.198299"/>
+<status status="PASS" start="2025-03-24T22:37:22.666271" elapsed="0.058842"/>
 </kw>
 <doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:09:13.136856" elapsed="4.033043"/>
+<status status="PASS" start="2025-03-24T22:37:21.259033" elapsed="1.466080"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//a[@href='/password/signup']</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:17.170382" elapsed="0.046035"/>
+<status status="PASS" start="2025-03-24T22:37:22.725113" elapsed="0.017954"/>
 </kw>
 <kw name="Acessar Tela de Cadastro" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_CREATE_ACCOUNT}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:17.217729" elapsed="0.021086"/>
+<status status="PASS" start="2025-03-24T22:37:22.744064" elapsed="0.007979"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:17.239481" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
+<msg time="2025-03-24T22:37:22.752043" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
 <arg>${XPATH_CREATE_ACCOUNT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:17.239135" elapsed="0.133333"/>
+<status status="PASS" start="2025-03-24T22:37:22.752043" elapsed="0.041886"/>
 </kw>
 <doc>Clica no botão "Create a new account" para acessar a tela de cadastro.</doc>
-<status status="PASS" start="2025-03-24T17:09:17.217076" elapsed="0.155663"/>
+<status status="PASS" start="2025-03-24T22:37:22.743067" elapsed="0.050862"/>
 </kw>
 <kw name="Preencher Campos de Login" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_EMAIL_INPUT}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:17.374867" elapsed="0.031983"/>
+<status status="PASS" start="2025-03-24T22:37:22.793929" elapsed="0.012966"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:17.407747" level="INFO">Typing text '1@1.c' into text field 'xpath=//input[@type='email']'.</msg>
+<msg time="2025-03-24T22:37:22.806895" level="INFO">Typing text '1@1.c' into text field 'xpath=//input[@type='email']'.</msg>
 <arg>${XPATH_EMAIL_INPUT}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:17.407237" elapsed="0.161310"/>
+<status status="PASS" start="2025-03-24T22:37:22.806895" elapsed="0.068817"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_PASSWORD_INPUT}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:17.568861" elapsed="0.027307"/>
+<status status="PASS" start="2025-03-24T22:37:22.875712" elapsed="0.010970"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:17.597212" level="INFO">Typing text '1' into text field 'xpath=//input[@type='password']'.</msg>
+<msg time="2025-03-24T22:37:22.887679" level="INFO">Typing text '1' into text field 'xpath=//input[@type='password']'.</msg>
 <arg>${XPATH_PASSWORD_INPUT}</arg>
 <arg>${senha}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:17.596597" elapsed="0.131435"/>
+<status status="PASS" start="2025-03-24T22:37:22.886682" elapsed="0.039894"/>
 </kw>
 <arg>${SHORT_EMAIL}</arg>
 <arg>1</arg>
 <doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:09:17.374021" elapsed="0.354289"/>
+<status status="PASS" start="2025-03-24T22:37:22.793929" elapsed="0.132647"/>
 </kw>
 <kw name="Clicar Botão Signup" owner="keywords">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:17.729587" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
+<msg time="2025-03-24T22:37:22.927572" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
 <arg>${XPATH_SIGNUP_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:17.729267" elapsed="0.119668"/>
+<status status="PASS" start="2025-03-24T22:37:22.927572" elapsed="0.048870"/>
 </kw>
 <doc>Clica no botão de cadastro (Signup).</doc>
-<status status="PASS" start="2025-03-24T17:09:17.728829" elapsed="0.120282"/>
+<status status="PASS" start="2025-03-24T22:37:22.926576" elapsed="0.049866"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:18.028325" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="curto_cadastro.png"&gt;&lt;img src="curto_cadastro.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-24T22:37:23.069194" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="curto_cadastro.png"&gt;&lt;img src="curto_cadastro.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>curto_cadastro.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:09:17.849598" elapsed="0.178849"/>
+<status status="PASS" start="2025-03-24T22:37:22.976442" elapsed="0.092752"/>
 </kw>
 <kw name="Fechar Navegador" owner="keywords">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:09:18.029127" elapsed="2.325698"/>
+<status status="PASS" start="2025-03-24T22:37:23.070191" elapsed="2.097832"/>
 </kw>
 <doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:09:18.028814" elapsed="2.326141"/>
+<status status="PASS" start="2025-03-24T22:37:23.070191" elapsed="2.097832"/>
 </kw>
-<status status="PASS" start="2025-03-24T17:09:13.136193" elapsed="7.219095"/>
+<status status="PASS" start="2025-03-24T22:37:21.259033" elapsed="3.908990"/>
 </test>
 <test id="s1-s1-s1-t7" name="Cadastro - E-mail Duplicado" line="74">
 <kw name="Acessar Tela Inicial" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:20.357424" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
+<msg time="2025-03-24T22:37:25.169021" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
+<msg time="2025-03-24T22:37:25.302376" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-03-24T22:37:25.302376" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:09:20.357217" elapsed="3.380497"/>
+<status status="FAIL" start="2025-03-24T22:37:25.169021" elapsed="0.271962">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:09:23.738163" elapsed="0.064339"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.440983" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:23.802906" elapsed="0.039710"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.440983" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:23.844096" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:23.843248" elapsed="0.182337"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.440983" elapsed="0.000000"/>
 </kw>
 <doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:09:20.356929" elapsed="3.669075"/>
+<status status="FAIL" start="2025-03-24T22:37:25.169021" elapsed="0.271962">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
 </kw>
 <kw name="Acessar Tela de Cadastro" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_CREATE_ACCOUNT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:24.028428" elapsed="0.071954"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:24.101203" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
-<arg>${XPATH_CREATE_ACCOUNT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:24.100749" elapsed="0.116300"/>
-</kw>
 <doc>Clica no botão "Create a new account" para acessar a tela de cadastro.</doc>
-<status status="PASS" start="2025-03-24T17:09:24.027731" elapsed="0.189547"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.441885" elapsed="0.000000"/>
 </kw>
 <kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:24.218869" elapsed="0.047454"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:24.267087" level="INFO">Typing text 'usuario@teste.com' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:24.266688" elapsed="0.168772"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:24.435735" elapsed="0.028162"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:24.464548" level="INFO">Typing text 'Teste@1234' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:24.464149" elapsed="0.120941"/>
-</kw>
 <arg>${VALID_EMAIL}</arg>
 <arg>${STRONG_PASSWORD}</arg>
 <doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:09:24.217921" elapsed="0.367409"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.441885" elapsed="0.000000"/>
 </kw>
 <kw name="Clicar Botão Signup" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:24.587019" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
-<arg>${XPATH_SIGNUP_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:24.586579" elapsed="0.109767"/>
-</kw>
 <doc>Clica no botão de cadastro (Signup).</doc>
-<status status="PASS" start="2025-03-24T17:09:24.585928" elapsed="0.110565"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.441885" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//p[contains(@class, 'text-center') and contains(@class, 'text-red-500') and contains(text(), 'User already exists')]</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:24.696872" elapsed="0.443819"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.442884" elapsed="0.000000"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:25.301077" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cadastro_email_duplicado.png"&gt;&lt;img src="cadastro_email_duplicado.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>cadastro_email_duplicado.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:09:25.141214" elapsed="0.159989"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.442884" elapsed="0.000000"/>
 </kw>
 <kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:09:25.302048" elapsed="3.338973"/>
-</kw>
 <doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:09:25.301677" elapsed="3.339555"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.442884" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-03-24T17:09:20.356334" elapsed="8.285275"/>
+<status status="FAIL" start="2025-03-24T22:37:25.169021" elapsed="0.273863">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
 </test>
 <test id="s1-s1-s1-t8" name="Cadastro - Senha Muito Curta" line="83">
 <kw name="Acessar Tela Inicial" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:28.644808" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:09:28.644537" elapsed="3.961141"/>
+<status status="FAIL" start="2025-03-24T22:37:25.445017" elapsed="0.000000">Execution terminated by signal</status>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:09:32.606212" elapsed="0.044150"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.445017" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:32.650752" elapsed="0.049532"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.445017" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:32.701177" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
 <arg>${XPATH_PASSWORD_AUTH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:32.700687" elapsed="0.178732"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.445017" elapsed="0.000000"/>
 </kw>
 <doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:09:28.644138" elapsed="4.235986"/>
+<status status="FAIL" start="2025-03-24T22:37:25.445017" elapsed="0.000998">Execution terminated by signal</status>
 </kw>
 <kw name="Acessar Tela de Cadastro" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_CREATE_ACCOUNT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:32.881763" elapsed="0.249359"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:33.131887" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
-<arg>${XPATH_CREATE_ACCOUNT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:33.131504" elapsed="0.090710"/>
-</kw>
 <doc>Clica no botão "Create a new account" para acessar a tela de cadastro.</doc>
-<status status="PASS" start="2025-03-24T17:09:32.881054" elapsed="0.341366"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.446015" elapsed="0.000000"/>
 </kw>
-<kw name="Email" owner="FakerLibrary">
-<msg time="2025-03-24T17:09:33.223693" level="INFO">${EMAIL} = stephanie86@example.com</msg>
+<kw name="FakerLibrary.email">
 <var>${EMAIL}</var>
-<status status="PASS" start="2025-03-24T17:09:33.222968" elapsed="0.000845"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.446015" elapsed="0.000000"/>
 </kw>
 <kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:33.225393" elapsed="0.026428"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:33.252403" level="INFO">Typing text 'stephanie86@example.com' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:33.252078" elapsed="0.169185"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:33.421944" elapsed="0.026004"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:33.448559" level="INFO">Typing text '1' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:33.448225" elapsed="0.087842"/>
-</kw>
 <arg>${EMAIL}</arg>
 <arg>1</arg>
 <doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:09:33.224494" elapsed="0.311727"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.446015" elapsed="0.000000"/>
 </kw>
 <kw name="Clicar Botão Signup" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:33.537207" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
-<arg>${XPATH_SIGNUP_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:33.536961" elapsed="0.110665"/>
-</kw>
 <doc>Clica no botão de cadastro (Signup).</doc>
-<status status="PASS" start="2025-03-24T17:09:33.536622" elapsed="0.111262"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.447013" elapsed="0.000000"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:33.835345" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cadastro_senha_curta.png"&gt;&lt;img src="cadastro_senha_curta.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>cadastro_senha_curta.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:09:33.648434" elapsed="0.187130"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.447013" elapsed="0.000000"/>
 </kw>
 <kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:09:33.836704" elapsed="2.309386"/>
-</kw>
 <doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:09:33.836131" elapsed="2.310110"/>
+<status status="NOT RUN" start="2025-03-24T22:37:25.447013" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-03-24T17:09:28.643401" elapsed="7.503113"/>
+<status status="FAIL" start="2025-03-24T22:37:25.443881" elapsed="0.003132">Execution terminated by signal</status>
 </test>
 <test id="s1-s1-s1-t9" name="Cadastro - Senha Insegura" line="92">
-<kw name="Acessar Tela Inicial" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:36.148588" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:09:36.148368" elapsed="3.411909"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:09:39.560641" elapsed="0.086318"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:39.647332" elapsed="0.048968"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:39.697025" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:39.696656" elapsed="0.133959"/>
-</kw>
-<doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:09:36.148073" elapsed="3.682787"/>
-</kw>
-<kw name="Acessar Tela de Cadastro" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_CREATE_ACCOUNT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:39.832105" elapsed="0.253766"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:40.086417" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
-<arg>${XPATH_CREATE_ACCOUNT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:40.086130" elapsed="0.085199"/>
-</kw>
-<doc>Clica no botão "Create a new account" para acessar a tela de cadastro.</doc>
-<status status="PASS" start="2025-03-24T17:09:39.831509" elapsed="0.340114"/>
-</kw>
-<kw name="Email" owner="FakerLibrary">
-<msg time="2025-03-24T17:09:40.173212" level="INFO">${EMAIL} = hannahtucker@example.net</msg>
-<var>${EMAIL}</var>
-<status status="PASS" start="2025-03-24T17:09:40.172156" elapsed="0.001187"/>
-</kw>
-<kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:40.174714" elapsed="0.027006"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:40.202275" level="INFO">Typing text 'hannahtucker@example.net' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:40.201927" elapsed="0.152852"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:40.355169" elapsed="0.022924"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:40.378621" level="INFO">Typing text 'teste1234' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:40.378308" elapsed="0.096189"/>
-</kw>
-<arg>${EMAIL}</arg>
-<arg>${WEAK_PASSWORD}</arg>
-<doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:09:40.174050" elapsed="0.300623"/>
-</kw>
-<kw name="Clicar Botão Signup" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:40.475758" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
-<arg>${XPATH_SIGNUP_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:40.475515" elapsed="0.101246"/>
-</kw>
-<doc>Clica no botão de cadastro (Signup).</doc>
-<status status="PASS" start="2025-03-24T17:09:40.475174" elapsed="0.101859"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:40.735823" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cadastro_senha_insegura.png"&gt;&lt;img src="cadastro_senha_insegura.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>cadastro_senha_insegura.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:09:40.577582" elapsed="0.158362"/>
-</kw>
-<kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:09:40.736655" elapsed="2.295161"/>
-</kw>
-<doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:09:40.736361" elapsed="2.295624"/>
-</kw>
-<status status="PASS" start="2025-03-24T17:09:36.147414" elapsed="6.884945"/>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-03-24T22:37:25.448011" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-s1-s1-t10" name="Cadastro - Senha Segura" line="101">
-<kw name="Acessar Tela Inicial" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:43.035262" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:09:43.034805" elapsed="3.973036"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:09:47.008098" elapsed="0.055449"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:47.063766" elapsed="0.045921"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:47.110421" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:47.110018" elapsed="0.107545"/>
-</kw>
-<doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:09:43.034302" elapsed="4.183523"/>
-</kw>
-<kw name="Acessar Tela de Cadastro" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_CREATE_ACCOUNT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:47.219085" elapsed="0.038460"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:47.258073" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
-<arg>${XPATH_CREATE_ACCOUNT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:47.257786" elapsed="0.115151"/>
-</kw>
-<doc>Clica no botão "Create a new account" para acessar a tela de cadastro.</doc>
-<status status="PASS" start="2025-03-24T17:09:47.218412" elapsed="0.154752"/>
-</kw>
-<kw name="Email" owner="FakerLibrary">
-<msg time="2025-03-24T17:09:47.373987" level="INFO">${EMAIL} = ymay@example.org</msg>
-<var>${EMAIL}</var>
-<status status="PASS" start="2025-03-24T17:09:47.373504" elapsed="0.000529"/>
-</kw>
-<kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:47.412019" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:47.374789" elapsed="0.255483"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:47.630741" level="INFO">Typing text 'ymay@example.org' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:47.630467" elapsed="0.133170"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:47.764013" elapsed="0.022426"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:47.786932" level="INFO">Typing text 'Teste@1234' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:47.786654" elapsed="0.092486"/>
-</kw>
-<arg>${EMAIL}</arg>
-<arg>${STRONG_PASSWORD}</arg>
-<doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:09:47.374363" elapsed="0.504964"/>
-</kw>
-<kw name="Clicar Botão Signup" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:47.880351" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
-<arg>${XPATH_SIGNUP_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:47.880102" elapsed="0.105316"/>
-</kw>
-<doc>Clica no botão de cadastro (Signup).</doc>
-<status status="PASS" start="2025-03-24T17:09:47.879762" elapsed="0.105788"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>${SIGNUP_SUCCESS_MESSAGE}</arg>
-<arg>10s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-03-24T17:09:47.985893" elapsed="0.638746"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:48.744823" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cadastro_senha_segura.png"&gt;&lt;img src="cadastro_senha_segura.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>cadastro_senha_segura.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:09:48.624988" elapsed="0.119936"/>
-</kw>
-<kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:09:48.745570" elapsed="2.257594"/>
-</kw>
-<doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:09:48.745308" elapsed="2.257994"/>
-</kw>
-<status status="PASS" start="2025-03-24T17:09:43.033501" elapsed="7.970082"/>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-03-24T22:37:25.449008" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-s1-s1-t11" name="Cadastro - Redirecionamento Após Sucesso" line="111">
-<kw name="Acessar Tela Inicial" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:51.005546" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:09:51.005337" elapsed="3.323999"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:09:54.329725" elapsed="0.151625"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:54.481768" elapsed="0.155842"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:54.638624" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:54.638087" elapsed="0.269063"/>
-</kw>
-<doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:09:51.005069" elapsed="3.902360"/>
-</kw>
-<kw name="Acessar Tela de Cadastro" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_CREATE_ACCOUNT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:54.908950" elapsed="0.044247"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:54.953860" level="INFO">Clicking element 'xpath=//a[@href='/password/signup']'.</msg>
-<arg>${XPATH_CREATE_ACCOUNT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:54.953465" elapsed="0.220526"/>
-</kw>
-<doc>Clica no botão "Create a new account" para acessar a tela de cadastro.</doc>
-<status status="PASS" start="2025-03-24T17:09:54.908358" elapsed="0.265789"/>
-</kw>
-<kw name="Email" owner="FakerLibrary">
-<msg time="2025-03-24T17:09:55.175781" level="INFO">${EMAIL} = mckenzieanderson@example.org</msg>
-<var>${EMAIL}</var>
-<status status="PASS" start="2025-03-24T17:09:55.174602" elapsed="0.001286"/>
-</kw>
-<kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:55.177999" elapsed="0.028224"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:55.206847" level="INFO">Typing text 'mckenzieanderson@example.org' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:55.206481" elapsed="0.149716"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:55.356448" elapsed="0.021006"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:55.378055" level="INFO">Typing text 'Teste@1234' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:55.377733" elapsed="0.089700"/>
-</kw>
-<arg>${EMAIL}</arg>
-<arg>${STRONG_PASSWORD}</arg>
-<doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:09:55.176576" elapsed="0.290999"/>
-</kw>
-<kw name="Clicar Botão Signup" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:55.468821" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
-<arg>${XPATH_SIGNUP_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:09:55.468532" elapsed="0.094522"/>
-</kw>
-<doc>Clica no botão de cadastro (Signup).</doc>
-<status status="PASS" start="2025-03-24T17:09:55.468075" elapsed="0.095110"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//p[contains(@class, 'text-green-500') and contains(text(), 'Welcome!')]</arg>
-<arg>15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:55.563511" elapsed="0.645254"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//p[contains(@class, 'text-green-500') and contains(text(), '${SIGNUP_SUCCESS_MESSAGE}')]</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:56.209093" elapsed="0.018852"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//a[@href='/password/login']//p[contains(@class, 'text-blue-500') and contains(text(), 'Back to login')]</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:09:56.228305" elapsed="0.018882"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:56.385774" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cadastro_redirecionamento_sucesso.png"&gt;&lt;img src="cadastro_redirecionamento_sucesso.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>cadastro_redirecionamento_sucesso.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:09:56.247560" elapsed="0.138331"/>
-</kw>
-<kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:09:56.386727" elapsed="2.231509"/>
-</kw>
-<doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:09:56.386469" elapsed="2.231964"/>
-</kw>
-<status status="PASS" start="2025-03-24T17:09:51.004551" elapsed="7.614263"/>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-03-24T22:37:25.450005" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
 </test>
-<status status="FAIL" start="2025-03-24T17:08:34.914313" elapsed="83.705953"/>
+<status status="FAIL" start="2025-03-24T22:37:02.840387" elapsed="22.610615"/>
 </suite>
-<status status="FAIL" start="2025-03-24T17:08:34.912641" elapsed="83.709682"/>
+<status status="FAIL" start="2025-03-24T22:37:02.838392" elapsed="22.613608"/>
 </suite>
-<suite id="s1-s2" name="Login" source="C:\Users\ga060224\Desktop\projeto_robot\tests\login">
-<suite id="s1-s2-s1" name="Login" source="C:\Users\ga060224\Desktop\projeto_robot\tests\login\login.robot">
+<suite id="s1-s2" name="Login" source="C:\Users\Gabriel\Desktop\Coisas de programaçao\projeto_robot\projeto_robot\tests\login">
+<suite id="s1-s2-s1" name="Login" source="C:\Users\Gabriel\Desktop\Coisas de programaçao\projeto_robot\projeto_robot\tests\login\login.robot">
 <test id="s1-s2-s1-t1" name="Login - Conta Existente" line="13">
-<kw name="Acessar Tela Inicial" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:09:58.641705" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:09:58.641240" elapsed="3.804381"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:10:02.446003" elapsed="0.042956"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:02.489322" elapsed="0.048314"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:02.538564" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:02.538023" elapsed="0.218831"/>
-</kw>
-<doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:09:58.640706" elapsed="4.116324"/>
-</kw>
-<kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:02.758970" elapsed="0.054751"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:02.814827" level="INFO">Typing text 'usuario@teste.com' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:02.814153" elapsed="0.206360"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:03.020784" elapsed="0.023219"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:03.044833" level="INFO">Typing text 'Teste@1234' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:03.044241" elapsed="0.107759"/>
-</kw>
-<arg>${VALID_EMAIL}</arg>
-<arg>${VALID_PASSWORD}</arg>
-<doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:10:02.757886" elapsed="0.394267"/>
-</kw>
-<kw name="Clicar Botão Login" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:03.153104" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Login')]'.</msg>
-<arg>${XPATH_LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:03.152864" elapsed="0.099408"/>
-</kw>
-<doc>Clica no botão de login.</doc>
-<status status="PASS" start="2025-03-24T17:10:03.152537" elapsed="0.100039"/>
-</kw>
-<kw name="Verificar Mensagem" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//p[contains(text(), '${mensagem}')]</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:03.253366" elapsed="0.648344"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:03.917317" level="INFO">Current page contains text 'Login successful'.</msg>
-<arg>${mensagem}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-03-24T17:10:03.901895" elapsed="0.015518"/>
-</kw>
-<arg>${LOGIN_SUCCESS_MESSAGE}</arg>
-<doc>Verifica se a mensagem esperada está presente na página.</doc>
-<status status="PASS" start="2025-03-24T17:10:03.252987" elapsed="0.664530"/>
-</kw>
-<kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:10:03.918177" elapsed="2.336957"/>
-</kw>
-<doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:10:03.917863" elapsed="2.337501"/>
-</kw>
-<status status="PASS" start="2025-03-24T17:09:58.639943" elapsed="7.615846"/>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-03-24T22:37:25.453994" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-s2-s1-t2" name="Login - Credenciais Incorretas" line="21">
-<kw name="Acessar Tela Inicial" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:06.257918" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:10:06.257692" elapsed="3.515781"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:10:09.773956" elapsed="0.098623"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:09.873022" elapsed="0.063433"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:09.937406" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:09.936924" elapsed="0.181548"/>
-</kw>
-<doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:10:06.257389" elapsed="3.861358"/>
-</kw>
-<kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:10.120352" elapsed="0.082959"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:10.204373" level="INFO">Typing text 'usuario@teste.com' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:10.203747" elapsed="0.204344"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:10.409061" elapsed="0.037769"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:10.447773" level="INFO">Typing text '@ @#' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:10.447201" elapsed="0.126357"/>
-</kw>
-<arg>${VALID_EMAIL}</arg>
-<arg>${INVALID_PASSWORD}</arg>
-<doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:10:10.119342" elapsed="0.454469"/>
-</kw>
-<kw name="Clicar Botão Login" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:10.575628" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Login')]'.</msg>
-<arg>${XPATH_LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:10.575041" elapsed="0.130936"/>
-</kw>
-<doc>Clica no botão de login.</doc>
-<status status="PASS" start="2025-03-24T17:10:10.574412" elapsed="0.131718"/>
-</kw>
-<kw name="Verificar Mensagem" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//p[contains(text(), '${mensagem}')]</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:10.707056" elapsed="0.649150"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:11.369306" level="INFO">Current page contains text 'Invalid credentials'.</msg>
-<arg>${mensagem}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-03-24T17:10:11.356394" elapsed="0.013004"/>
-</kw>
-<arg>${INVALID_CREDENTIALS}</arg>
-<doc>Verifica se a mensagem esperada está presente na página.</doc>
-<status status="PASS" start="2025-03-24T17:10:10.706548" elapsed="0.662948"/>
-</kw>
-<kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:10:11.370115" elapsed="2.320245"/>
-</kw>
-<doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:10:11.369855" elapsed="2.320750"/>
-</kw>
-<status status="PASS" start="2025-03-24T17:10:06.256830" elapsed="7.434497"/>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-03-24T22:37:25.453994" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-s2-s1-t3" name="Login - Conta Inexistente" line="29">
-<kw name="Acessar Tela Inicial" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:13.694462" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:10:13.694126" elapsed="4.465044"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:10:18.159591" elapsed="0.070480"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:18.230398" elapsed="0.104670"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:18.335997" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:18.335460" elapsed="0.252052"/>
-</kw>
-<doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:10:13.693589" elapsed="4.894148"/>
-</kw>
-<kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:18.592091" elapsed="0.063975"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:18.657171" level="INFO">Typing text 'inexistente@exemplo.com' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:18.656622" elapsed="0.349926"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:19.006964" elapsed="0.032753"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:19.040475" level="INFO">Typing text 'senhaqualquer' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:19.040040" elapsed="0.342466"/>
-</kw>
-<arg>inexistente@exemplo.com</arg>
-<arg>senhaqualquer</arg>
-<doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:10:18.591341" elapsed="0.791419"/>
-</kw>
-<kw name="Clicar Botão Login" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:19.384160" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Login')]'.</msg>
-<arg>${XPATH_LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:19.383796" elapsed="0.170121"/>
-</kw>
-<doc>Clica no botão de login.</doc>
-<status status="PASS" start="2025-03-24T17:10:19.383269" elapsed="0.170860"/>
-</kw>
-<kw name="Verificar Mensagem" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//p[contains(text(), '${mensagem}')]</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:19.555405" elapsed="0.451834"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:20.024513" level="INFO">Current page contains text 'Invalid credentials'.</msg>
-<arg>${mensagem}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-03-24T17:10:20.007649" elapsed="0.017026"/>
-</kw>
-<arg>${INVALID_CREDENTIALS}</arg>
-<doc>Verifica se a mensagem esperada está presente na página.</doc>
-<status status="PASS" start="2025-03-24T17:10:19.554682" elapsed="0.470181"/>
-</kw>
-<kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:10:20.025632" elapsed="2.504218"/>
-</kw>
-<doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:10:20.025277" elapsed="2.504788"/>
-</kw>
-<status status="PASS" start="2025-03-24T17:10:13.692583" elapsed="8.838295"/>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-03-24T22:37:25.454992" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-s2-s1-t4" name="Login - Campos Vazios" line="37">
-<kw name="Acessar Tela Inicial" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:22.533842" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:10:22.533480" elapsed="5.200096"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:10:27.733931" elapsed="0.042611"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:27.776919" elapsed="0.047381"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:27.825225" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:27.824690" elapsed="0.237528"/>
-</kw>
-<doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:10:22.532981" elapsed="5.529514"/>
-</kw>
-<kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:28.066964" elapsed="0.051524"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:28.119586" level="INFO">Typing text '' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:28.118886" elapsed="0.194474"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:28.313743" elapsed="0.037544"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:28.352417" level="INFO">Typing text '' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:28.351691" elapsed="0.154494"/>
-</kw>
-<arg>${EMPTY}</arg>
-<arg>${EMPTY}</arg>
-<doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:10:28.063431" elapsed="0.443034"/>
-</kw>
-<kw name="Clicar Botão Login" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:28.508992" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Login')]'.</msg>
-<arg>${XPATH_LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:28.508335" elapsed="0.186782"/>
-</kw>
-<doc>Clica no botão de login.</doc>
-<status status="PASS" start="2025-03-24T17:10:28.507514" elapsed="0.187878"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:28.698663" level="INFO">Executing JavaScript:
-return document.querySelector("input[type='email']").validationMessage;
-Without any arguments.</msg>
-<msg time="2025-03-24T17:10:28.711232" level="INFO">${email_tooltip} = Preencha este campo.</msg>
-<var>${email_tooltip}</var>
-<arg>return document.querySelector("input[type='email']").validationMessage;</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-03-24T17:10:28.696178" elapsed="0.015156"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${email_tooltip}</arg>
-<arg>${EMAIL_VALIDATION_MESSAGE}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-03-24T17:10:28.711854" elapsed="0.000653"/>
-</kw>
-<kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:10:28.713717" elapsed="2.830527"/>
-</kw>
-<doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:10:28.713055" elapsed="2.831394"/>
-</kw>
-<status status="PASS" start="2025-03-24T17:10:22.532044" elapsed="9.015671"/>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-03-24T22:37:25.455989" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-s2-s1-t5" name="Login - E-mail Incorreto" line="45">
-<kw name="Acessar Tela Inicial" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:31.551036" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:10:31.550460" elapsed="5.800039"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:10:37.351075" elapsed="0.211272"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:37.562750" elapsed="0.124673"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:37.688362" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:37.687829" elapsed="0.270794"/>
-</kw>
-<doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:10:31.549877" elapsed="6.409132"/>
-</kw>
-<kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:37.961624" elapsed="0.060704"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:38.023256" level="INFO">Typing text 'emailerrado@teste' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:38.022706" elapsed="0.396394"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:38.419516" elapsed="0.034564"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:38.454782" level="INFO">Typing text 'Teste@1234' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:38.454375" elapsed="0.148734"/>
-</kw>
-<arg>${INVALID_EMAIL}</arg>
-<arg>${VALID_PASSWORD}</arg>
-<doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:10:37.960622" elapsed="0.642795"/>
-</kw>
-<kw name="Clicar Botão Login" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:38.605173" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Login')]'.</msg>
-<arg>${XPATH_LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:38.604722" elapsed="0.131960"/>
-</kw>
-<doc>Clica no botão de login.</doc>
-<status status="PASS" start="2025-03-24T17:10:38.604088" elapsed="0.132817"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//p[contains(text(), '${INVALID_CREDENTIALS}')]</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:38.737432" elapsed="0.448665"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:39.205466" level="INFO">Current page contains text 'Invalid credentials'.</msg>
-<arg>${INVALID_CREDENTIALS}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-03-24T17:10:39.186520" elapsed="0.019055"/>
-</kw>
-<kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:10:39.206352" elapsed="2.294504"/>
-</kw>
-<doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:10:39.206011" elapsed="2.295001"/>
-</kw>
-<status status="PASS" start="2025-03-24T17:10:31.548843" elapsed="9.952547"/>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-03-24T22:37:25.455989" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-s2-s1-t6" name="Login - Senha Vazia" line="53">
-<kw name="Acessar Tela Inicial" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:41.503859" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:10:41.503633" elapsed="3.091362"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:10:44.595417" elapsed="0.102335"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:44.698156" elapsed="0.054841"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:44.753989" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:44.753464" elapsed="0.169148"/>
-</kw>
-<doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:10:41.503311" elapsed="3.419620"/>
-</kw>
-<kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:44.926150" elapsed="0.248847"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:45.175589" level="INFO">Typing text 'usuario@teste.com' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:45.175255" elapsed="0.159266"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:45.334769" elapsed="0.021646"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:45.357023" level="INFO">Typing text '' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:45.356674" elapsed="0.085605"/>
-</kw>
-<arg>${VALID_EMAIL}</arg>
-<arg>${EMPTY}</arg>
-<doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:10:44.923850" elapsed="0.518584"/>
-</kw>
-<kw name="Clicar Botão Login" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:45.443536" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Login')]'.</msg>
-<arg>${XPATH_LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:45.443260" elapsed="0.117673"/>
-</kw>
-<doc>Clica no botão de login.</doc>
-<status status="PASS" start="2025-03-24T17:10:45.442865" elapsed="0.118211"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:45.562166" level="INFO">Executing JavaScript:
-return document.querySelector("input[type='password']").validationMessage;
-Without any arguments.</msg>
-<msg time="2025-03-24T17:10:45.569560" level="INFO">${mensagem} = Preencha este campo.</msg>
-<var>${mensagem}</var>
-<arg>return document.querySelector("input[type='password']").validationMessage;</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-03-24T17:10:45.561530" elapsed="0.008092"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-24T17:10:45.570638" level="INFO">Preencha este campo.</msg>
-<arg>${mensagem}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-24T17:10:45.569981" elapsed="0.000762"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:45.994173" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="login_senha_vazia.png"&gt;&lt;img src="login_senha_vazia.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>login_senha_vazia.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:10:45.571134" elapsed="0.423157"/>
-</kw>
-<kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:10:45.994977" elapsed="2.292789"/>
-</kw>
-<doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:10:45.994679" elapsed="2.293312"/>
-</kw>
-<status status="PASS" start="2025-03-24T17:10:41.502543" elapsed="6.785893"/>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-03-24T22:37:25.456986" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-s2-s1-t7" name="Login - E-mail Vazio" line="62">
-<kw name="Acessar Tela Inicial" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:48.291024" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:10:48.290709" elapsed="4.132467"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:10:52.423614" elapsed="0.088296"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:52.512332" elapsed="0.075306"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:52.588762" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:52.588086" elapsed="0.211374"/>
-</kw>
-<doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:10:48.290279" elapsed="4.509454"/>
-</kw>
-<kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:52.811858" elapsed="0.096872"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:52.909950" level="INFO">Typing text '' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:52.909283" elapsed="0.197958"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:10:53.107651" elapsed="0.050092"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:53.158642" level="INFO">Typing text 'Teste@1234' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:53.158113" elapsed="0.234454"/>
-</kw>
-<arg>${EMPTY}</arg>
-<arg>${VALID_PASSWORD}</arg>
-<doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:10:52.809546" elapsed="0.583332"/>
-</kw>
-<kw name="Clicar Botão Login" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:53.395721" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Login')]'.</msg>
-<arg>${XPATH_LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:10:53.394957" elapsed="0.214540"/>
-</kw>
-<doc>Clica no botão de login.</doc>
-<status status="PASS" start="2025-03-24T17:10:53.393926" elapsed="0.215811"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:53.614813" level="INFO">Executing JavaScript:
-return document.querySelector("input[type='email']").validationMessage;
-Without any arguments.</msg>
-<msg time="2025-03-24T17:10:53.629972" level="INFO">${mensagem} = Preencha este campo.</msg>
-<var>${mensagem}</var>
-<arg>return document.querySelector("input[type='email']").validationMessage;</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-03-24T17:10:53.611970" elapsed="0.018198"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-24T17:10:53.631249" level="INFO">Preencha este campo.</msg>
-<arg>${mensagem}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-24T17:10:53.630835" elapsed="0.000591"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:54.179859" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="login_email_vazio.png"&gt;&lt;img src="login_email_vazio.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>login_email_vazio.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:10:53.631970" elapsed="0.548074"/>
-</kw>
-<kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:10:54.180972" elapsed="2.505234"/>
-</kw>
-<doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:10:54.180562" elapsed="2.505862"/>
-</kw>
-<status status="PASS" start="2025-03-24T17:10:48.289471" elapsed="8.397575"/>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-03-24T22:37:25.457984" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-s2-s1-t8" name="Login - E-mail Inválido" line="71">
-<kw name="Acessar Tela Inicial" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:10:56.690810" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:10:56.690292" elapsed="4.239193"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:11:00.929961" elapsed="0.069609"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:11:01.000451" elapsed="0.140298"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:01.141947" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:01.141163" elapsed="0.311939"/>
-</kw>
-<doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:10:56.689673" elapsed="4.763697"/>
-</kw>
-<kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:11:01.455096" elapsed="0.051300"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:01.507425" level="INFO">Typing text 'teste.com' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:01.506817" elapsed="0.216837"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:11:01.724249" elapsed="0.033213"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:01.758444" level="INFO">Typing text 'Teste@1234' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:01.757865" elapsed="0.147655"/>
-</kw>
-<arg>teste.com</arg>
-<arg>${VALID_PASSWORD}</arg>
-<doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:11:01.454138" elapsed="0.451754"/>
-</kw>
-<kw name="Clicar Botão Login" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:01.907311" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Login')]'.</msg>
-<arg>${XPATH_LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:01.906978" elapsed="0.148443"/>
-</kw>
-<doc>Clica no botão de login.</doc>
-<status status="PASS" start="2025-03-24T17:11:01.906483" elapsed="0.149102"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:02.056681" level="INFO">Executing JavaScript:
-return document.querySelector("input[type='email']").validationMessage;
-Without any arguments.</msg>
-<msg time="2025-03-24T17:11:02.084146" level="INFO">${mensagem} = Inclua um "@" no endereço de e-mail. "teste.com" está com um "@" faltando.</msg>
-<var>${mensagem}</var>
-<arg>return document.querySelector("input[type='email']").validationMessage;</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-03-24T17:11:02.055994" elapsed="0.028233"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-24T17:11:02.084916" level="INFO">Inclua um "@" no endereço de e-mail. "teste.com" está com um "@" faltando.</msg>
-<arg>${mensagem}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-24T17:11:02.084652" elapsed="0.000353"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:02.632811" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="login_email_invalido.png"&gt;&lt;img src="login_email_invalido.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>login_email_invalido.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:11:02.085335" elapsed="0.547615"/>
-</kw>
-<kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:11:02.633832" elapsed="2.361867"/>
-</kw>
-<doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:11:02.633435" elapsed="2.362522"/>
-</kw>
-<status status="PASS" start="2025-03-24T17:10:56.688648" elapsed="8.307735"/>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-03-24T22:37:25.458981" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-s2-s1-t9" name="Login - Senha Incorreta" line="80">
-<kw name="Acessar Tela Inicial" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:04.998822" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:11:04.998565" elapsed="3.862749"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:11:08.861779" elapsed="0.066747"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:11:08.928938" elapsed="0.069866"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:08.999852" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:08.999273" elapsed="0.283969"/>
-</kw>
-<doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:11:04.998196" elapsed="4.285420"/>
-</kw>
-<kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:11:09.288213" elapsed="0.079431"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:09.368915" level="INFO">Typing text 'usuario@teste.com' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:09.368142" elapsed="0.222330"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:11:09.590843" elapsed="0.030698"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:09.622505" level="INFO">Typing text 'senhaerrada123' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:09.621972" elapsed="0.150557"/>
-</kw>
-<arg>${VALID_EMAIL}</arg>
-<arg>senhaerrada123</arg>
-<doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:11:09.287182" elapsed="0.485689"/>
-</kw>
-<kw name="Clicar Botão Login" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:09.775539" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Login')]'.</msg>
-<arg>${XPATH_LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:09.774938" elapsed="0.150323"/>
-</kw>
-<doc>Clica no botão de login.</doc>
-<status status="PASS" start="2025-03-24T17:11:09.774097" elapsed="0.151379"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//p[contains(text(), '${INVALID_CREDENTIALS}')]</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:11:09.926023" elapsed="0.458178"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:10.591492" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="login_senha_incorreta.png"&gt;&lt;img src="login_senha_incorreta.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>login_senha_incorreta.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:11:10.384775" elapsed="0.206878"/>
-</kw>
-<kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:11:10.592551" elapsed="2.381737"/>
-</kw>
-<doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:11:10.592129" elapsed="2.382424"/>
-</kw>
-<status status="PASS" start="2025-03-24T17:11:04.997542" elapsed="7.977504"/>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-03-24T22:37:25.459979" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-s2-s1-t10" name="Login - E-mail Existente e Senha Correta" line="88">
-<kw name="Acessar Tela Inicial" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:12.977758" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:11:12.977439" elapsed="4.262682"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:11:17.240612" elapsed="0.044414"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:11:17.285328" elapsed="0.050778"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:17.337340" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:17.336711" elapsed="0.227366"/>
-</kw>
-<doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:11:12.976999" elapsed="4.587389"/>
-</kw>
-<kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:11:17.565771" elapsed="0.048537"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:17.615124" level="INFO">Typing text 'usuario@teste.com' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:17.614636" elapsed="0.248316"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:11:17.863411" elapsed="0.032082"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:17.896206" level="INFO">Typing text 'Teste@1234' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:17.895800" elapsed="0.135164"/>
-</kw>
-<arg>${VALID_EMAIL}</arg>
-<arg>${VALID_PASSWORD}</arg>
-<doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:11:17.565027" elapsed="0.466100"/>
-</kw>
-<kw name="Clicar Botão Login" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:18.032425" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Login')]'.</msg>
-<arg>${XPATH_LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:18.032128" elapsed="0.119317"/>
-</kw>
-<doc>Clica no botão de login.</doc>
-<status status="PASS" start="2025-03-24T17:11:18.031571" elapsed="0.120037"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//p[contains(text(), '${LOGIN_SUCCESS_MESSAGE}')]</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:11:18.152000" elapsed="0.446215"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:18.751871" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="login_sucesso.png"&gt;&lt;img src="login_sucesso.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>login_sucesso.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:11:18.598572" elapsed="0.153410"/>
-</kw>
-<kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:11:18.752756" elapsed="2.320389"/>
-</kw>
-<doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:11:18.752435" elapsed="2.320924"/>
-</kw>
-<status status="PASS" start="2025-03-24T17:11:12.976170" elapsed="8.097582"/>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-03-24T22:37:25.459979" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-s2-s1-t11" name="Login - Redirecionamento Após Sucesso" line="96">
-<kw name="Acessar Tela Inicial" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:21.075976" level="INFO">Opening browser 'Chrome' to base url 'https://teste-estagiarios.vercel.app/'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-24T17:11:21.075756" elapsed="3.631336"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-24T17:11:24.707500" elapsed="0.072154"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:11:24.780031" elapsed="0.060275"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:24.841116" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Password-based Authentication.')]'.</msg>
-<arg>${XPATH_PASSWORD_AUTH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:24.840605" elapsed="0.183121"/>
-</kw>
-<doc>Abre o navegador, maximiza a janela e clica no botão "Password-based Authentication."</doc>
-<status status="PASS" start="2025-03-24T17:11:21.075452" elapsed="3.948452"/>
-</kw>
-<kw name="Preencher Campos de Login" owner="keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:11:25.025153" elapsed="0.242839"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:25.268612" level="INFO">Typing text 'usuario@teste.com' into text field 'xpath=//input[@type='email']'.</msg>
-<arg>${XPATH_EMAIL_INPUT}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:25.268251" elapsed="0.154723"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-24T17:11:25.423512" elapsed="0.022065"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:25.446212" level="INFO">Typing text 'Teste@1234' into text field 'xpath=//input[@type='password']'.</msg>
-<arg>${XPATH_PASSWORD_INPUT}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:25.445841" elapsed="0.111995"/>
-</kw>
-<arg>${VALID_EMAIL}</arg>
-<arg>${VALID_PASSWORD}</arg>
-<doc>Preenche os campos de e-mail e senha no formulário de login.</doc>
-<status status="PASS" start="2025-03-24T17:11:25.024488" elapsed="0.533678"/>
-</kw>
-<kw name="Clicar Botão Login" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:25.559911" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Login')]'.</msg>
-<arg>${XPATH_LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-24T17:11:25.559462" elapsed="0.147985"/>
-</kw>
-<doc>Clica no botão de login.</doc>
-<status status="PASS" start="2025-03-24T17:11:25.558852" elapsed="0.149020"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Welcome!</arg>
-<arg>10s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-03-24T17:11:25.708711" elapsed="0.439644"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>${LOGIN_SUCCESS_MESSAGE}</arg>
-<arg>10s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-03-24T17:11:26.148754" elapsed="0.014490"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-24T17:11:26.341647" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="login_redirecionamento_sucesso.png"&gt;&lt;img src="login_redirecionamento_sucesso.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>login_redirecionamento_sucesso.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-24T17:11:26.163627" elapsed="0.178200"/>
-</kw>
-<kw name="Fechar Navegador" owner="keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-24T17:11:26.342580" elapsed="2.377428"/>
-</kw>
-<doc>Fecha o navegador.</doc>
-<status status="PASS" start="2025-03-24T17:11:26.342296" elapsed="2.377849"/>
-</kw>
-<status status="PASS" start="2025-03-24T17:11:21.074822" elapsed="7.645660"/>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-03-24T22:37:25.460975" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
 </test>
-<status status="PASS" start="2025-03-24T17:09:58.626129" elapsed="90.095409"/>
+<status status="FAIL" start="2025-03-24T22:37:25.452997" elapsed="0.008975"/>
 </suite>
-<status status="PASS" start="2025-03-24T17:09:58.623691" elapsed="90.099229"/>
+<status status="FAIL" start="2025-03-24T22:37:25.452997" elapsed="0.008975"/>
 </suite>
-<status status="FAIL" start="2025-03-24T17:08:34.866983" elapsed="173.857191"/>
+<status status="FAIL" start="2025-03-24T22:37:02.812584" elapsed="22.650386"/>
 </suite>
 <statistics>
 <total>
-<stat pass="21" fail="1" skip="0">All Tests</stat>
+<stat pass="4" fail="18" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat info="combined" combined="NOT robot:exit" pass="4" fail="4" skip="0">NOT robot:exit</stat>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="21" fail="1" skip="0">Tests</stat>
-<stat name="Cadastro" id="s1-s1" pass="10" fail="1" skip="0">Tests.Cadastro</stat>
-<stat name="Cadastro" id="s1-s1-s1" pass="10" fail="1" skip="0">Tests.Cadastro.Cadastro</stat>
-<stat name="Login" id="s1-s2" pass="11" fail="0" skip="0">Tests.Login</stat>
-<stat name="Login" id="s1-s2-s1" pass="11" fail="0" skip="0">Tests.Login.Login</stat>
+<stat name="Tests" id="s1" pass="4" fail="18" skip="0">Tests</stat>
+<stat name="Cadastro" id="s1-s1" pass="4" fail="7" skip="0">Tests.Cadastro</stat>
+<stat name="Cadastro" id="s1-s1-s1" pass="4" fail="7" skip="0">Tests.Cadastro.Cadastro</stat>
+<stat name="Login" id="s1-s2" pass="0" fail="11" skip="0">Tests.Login</stat>
+<stat name="Login" id="s1-s2-s1" pass="0" fail="11" skip="0">Tests.Login.Login</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-03-24T22:37:03.133403" level="ERROR">Error in file 'C:\Users\Gabriel\Desktop\Coisas de programaçao\projeto_robot\projeto_robot\tests\cadastro\cadastro.robot' on line 3: Importing library 'FakerLibrary' failed: ModuleNotFoundError: No module named 'FakerLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Gabriel\Desktop\Coisas de programaçao\projeto_robot\projeto_robot
+  C:\Python311\python311.zip
+  C:\Python311\DLLs
+  C:\Python311\Lib
+  C:\Python311
+  C:\Python311\Lib\site-packages</msg>
+<msg time="2025-03-24T22:37:03.150330" level="ERROR">Error in file 'C:\Users\Gabriel\Desktop\Coisas de programaçao\projeto_robot\projeto_robot\resources\keywords\keywords.robot' on line 3: Importing library 'FakerLibrary' failed: ModuleNotFoundError: No module named 'FakerLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Gabriel\Desktop\Coisas de programaçao\projeto_robot\projeto_robot
+  C:\Python311\python311.zip
+  C:\Python311\DLLs
+  C:\Python311\Lib
+  C:\Python311
+  C:\Python311\Lib\site-packages</msg>
 </errors>
 </robot>

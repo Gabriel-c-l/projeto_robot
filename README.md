@@ -13,7 +13,7 @@ Antes de iniciar, certifique-se de ter os seguintes itens instalados:
   - robotframework-requests
   - robotframework-jsonlibrary
   - robotframework-datadriver
-  - robotframework-faker  # Para geração de dados fictícios
+  - robotframework-faker  
 
 Para instalar todas as bibliotecas necessárias, execute:
 ```sh
@@ -61,6 +61,4 @@ projeto_robot/
 ```
 
 ---
-
-Esse é um rascunho inicial. Me avise se precisar de ajustes ou mais detalhes!
 
