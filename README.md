@@ -43,9 +43,9 @@ Para rodar os testes, utilize um dos seguintes comandos:
    ```
 2. Executando diretamente com Python:
    ```sh
-   python -m robot.run -d results tests/cadastro.robot
-   ou
    python -m robot.run -d results tests/cadastro/cadastro.robot
+   ou
+   python robot_test_runner.py
    ```
 
 Se houver arquivos de configuração específicos, adicionar instruções aqui.

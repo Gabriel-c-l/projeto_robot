@@ -18,7 +18,7 @@ Acessar Tela de Cadastro
     Wait Until Element Is Visible    ${XPATH_CREATE_ACCOUNT}    10s
     Click Element    ${XPATH_CREATE_ACCOUNT}
 
-Preencher Campos de Login
+Preencher Campos
     [Arguments]    ${email}    ${senha}
     [Documentation]    Preenche os campos de e-mail e senha no formulário de login.
     Wait Until Element Is Visible    ${XPATH_EMAIL_INPUT}    10s
@@ -32,7 +32,7 @@ Clicar Botão Login
 
 Clicar Botão Signup
     [Documentation]    Clica no botão de cadastro (Signup).
-    Click Button    ${XPATH_SIGNUP_BUTTON}
+    Click Button    ${XPATH_SIGNUP_BUTTON} 
 
 Verificar Mensagem
     [Arguments]    ${mensagem}
